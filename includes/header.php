@@ -1,4 +1,10 @@
 <?php
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'];
+$base_path = ($host === 'localhost') ? '/omning' : ''; 
+$base_url = $protocol . $host . $base_path;
+$current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
+
 $title = $page_title ?? 'OmnIng | Soluciones Integrales de Hardware y Software';
 $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en soluciones integrales. Expertos en soporte técnico, diseño gráfico y desarrollo de software a la medida en San Miguel, El Salvador.';
 ?>
@@ -25,8 +31,8 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/omning/assets/css/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top">
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
             <a class="navbar-brand" href="/omning/index.php">
                 <img src="/omning/assets/img/logo-omning.svg" alt="Logotipo OmnIng" height="40">
@@ -38,28 +44,40 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
             
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-blanco" href="/omning/index.php">Inicio</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/index.php">
+                            <i class="fa-solid fa-house"></i> Inicio
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blanco" href="/omning/nosotros.php">Nosotros</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/nosotros.php">
+                            <i class="fa-solid fa-users"></i> Nosotros
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blanco" href="/omning/servicios.php">Servicios</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/servicios.php">
+                            <i class="fa-solid fa-laptop-code"></i> Servicios
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blanco" href="/omning/portafolio.php">Portafolio</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/portafolio.php">
+                            <i class="fa-solid fa-briefcase"></i> Portafolio
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-blanco" href="/omning/contacto.php">Contacto</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/contacto.php">
+                            <i class="fa-solid fa-envelope"></i> Contacto
+                        </a>
                     </li>
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="https://wa.me/50369395620" target="_blank" rel="noopener noreferrer" class="btn bg-primario text-negro fw-bold">
-                        <i class="fa-brands fa-whatsapp me-2"></i>Cotizar Proyecto
+                    <a href="https://wa.me/50369395620" target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
+                        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Proyecto
                     </a>
                 </div>
             </div>
         </div>
     </nav>
+    
+    <main class="flex-grow-1">

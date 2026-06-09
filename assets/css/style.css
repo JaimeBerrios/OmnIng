@@ -44,3 +44,24 @@ h1, h2, h3, h4, h5, h6, .texto-primario {
 .border-primario {
     border-color: var(--color-primario) !important;
 }
+
+.btn-cta {
+    background-color: var(--color-primario);
+    color: var(--color-negro);
+    border: 2px solid var(--color-primario);
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    border: 2px solid var(--color-primario);
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primario) !important;
+}
