@@ -64,11 +64,11 @@
                         </li>
                         <li class="mb-3 d-flex align-items-center gap-2">
                             <i class="fa-solid fa-phone" style="color: var(--color-primario);"></i>
-                            <span>+503 6939 5620</span>
+                            <a href="tel:+50369395620" class="text-reset text-decoration-none"><span>+503 6939 5620</span></a>
                         </li>
                         <li class="mb-3 d-flex align-items-center gap-2">
                             <i class="fa-solid fa-envelope" style="color: var(--color-primario);"></i>
-                            <span>omningtec@gmail.com</span>
+                            <a href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none"><span>omningtec@gmail.com</span></a>
                         </li>
                     </ul>
                 </div>
