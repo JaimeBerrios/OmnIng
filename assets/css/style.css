@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Geom';
+    src: url('../fonts/Geom-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../fonts/Dosis-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-primario: #ffd000;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
+}
+
+body {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    font-family: 'Dosis', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .texto-primario {
+    color: var(--color-primario);
+    font-family: 'Geom', sans-serif;
+}
+
+.bg-primario {
+    background-color: var(--color-primario);
+}
+
+.bg-negro {
+    background-color: var(--color-negro);
+}
+
+.text-blanco {
+    color: var(--color-blanco);
+}
+
+.border-primario {
+    border-color: var(--color-primario) !important;
+}
