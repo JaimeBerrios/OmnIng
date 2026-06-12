@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /omning/
+
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^index\.php$ /omning/ [R=301,L]
+
+RewriteRule ^index$ /omning/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]

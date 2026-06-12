@@ -9,16 +9,16 @@
                         Transformamos los desafíos tecnológicos en soluciones integrales. Combinamos ingeniería de software y soporte técnico de hardware.
                     </p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4">
+                        <a href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestra página de Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4">
+                        <a href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro perfil de Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4">
+                        <a href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Ver nuestros videos en TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
-                        <a href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4">
+                        <a href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro canal de YouTube">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div>

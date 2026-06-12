@@ -1,4 +1,6 @@
 <?php
+define('BASE_URL', '/omning/');
+
 $host = "localhost";
 $db_name = "omning";
 $username = "root";

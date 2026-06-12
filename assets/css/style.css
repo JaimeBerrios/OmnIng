@@ -16,17 +16,32 @@
     --color-primario: #ffd000;
     --color-blanco: #ffffff;
     --color-negro: #000000;
+    --color-secundario: #10132b;
+    --color-terciario: #2a4350;
 }
 
 body {
     background-color: var(--color-blanco);
-    color: var(--color-negro);
+    color: var(--color-secundario);
     font-family: 'Dosis', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .texto-primario {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geom', sans-serif;
+}
+
+.texto-primario {
     color: var(--color-primario);
     font-family: 'Geom', sans-serif;
+}
+
+.texto-secundario {
+    color: var(--color-secundario);
+    font-family: 'Geom', sans-serif;
+}
+
+.text-blanco {
+    color: var(--color-blanco);
 }
 
 .bg-primario {
@@ -35,10 +50,6 @@ h1, h2, h3, h4, h5, h6, .texto-primario {
 
 .bg-negro {
     background-color: var(--color-negro);
-}
-
-.text-blanco {
-    color: var(--color-blanco);
 }
 
 .border-primario {
@@ -54,8 +65,30 @@ h1, h2, h3, h4, h5, h6, .texto-primario {
 
 .btn-cta:hover {
     background-color: var(--color-blanco);
-    color: var(--color-negro);
+    color: var(--color-secundario);
     border: 2px solid var(--color-primario);
+}
+
+.btn-negro {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-negro);
+    transition: all 0.3s ease;
+}
+
+.btn-negro:hover {
+    background-color: transparent;
+    color: var(--color-negro);
+}
+
+.custom-hover-btn {
+    transition: all 0.3s ease;
+}
+
+.custom-hover-btn:hover {
+    background-color: var(--color-primario);
+    color: var(--color-negro) !important;
+    border-color: var(--color-primario) !important;
 }
 
 .nav-link {
@@ -64,4 +97,21 @@ h1, h2, h3, h4, h5, h6, .texto-primario {
 
 .nav-link:hover {
     color: var(--color-primario) !important;
+}
+
+.custom-hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Corrección de Accesibilidad para textos secundarios */
+.text-muted {
+    color: #495057 !important;
+}
+.text-light.opacity-75 {
+    opacity: 0.85 !important; /* Mejora el contraste sobre fondo negro */
 }

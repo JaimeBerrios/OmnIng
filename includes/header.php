@@ -24,18 +24,18 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
     <meta property="og:description" content="<?php echo $desc; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://localhost/omning/">
-    <meta property="og:image" content="/omning/assets/img/og-image.jpg">
+    <meta property="og:image" content="<?php echo BASE_URL; ?>assets/img/og-image.jpg">
     
-    <link rel="icon" type="image/x-icon" href="/omning/assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/img/favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/omning/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
             <a class="navbar-brand" href="/omning/index.php">
-                <img src="/omning/assets/img/logo-omning.svg" alt="Logotipo OmnIng" height="40">
+                <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" alt="Logotipo OmnIng" height="40">
             </a>
             
             <button class="navbar-toggler border-primario" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">
