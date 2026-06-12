@@ -2,11 +2,23 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /omning/
 
-RewriteCond %{THE_REQUEST} /index\.php [NC]
-RewriteRule ^index\.php$ /omning/ [R=301,L]
+# Redirige cualquier index.php solicitado directamente hacia su directorio.
+# Ejemplos: /omning/index.php -> /omning/
+#           /omning/admin/index.php -> /omning/admin/
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.php(?:[\s?]) [NC]
+RewriteRule ^(.*/)?index\.php$ $1 [R=301,L,NE]
 
-RewriteRule ^index$ /omning/ [R=301,L]
+# Redirige cualquier URL .php solicitada directamente hacia su URL limpia.
+# Ejemplo: /omning/admin/login.php -> /omning/admin/login
+RewriteCond %{THE_REQUEST} \s/+[^?\s]*\.php(?:[\s?]) [NC]
+RewriteRule ^(.+)\.php$ $1 [R=301,L,NE]
 
-RewriteCond %{REQUEST_FILENAME} !-d
+# No reescribe archivos ni directorios físicos (CSS, JS, imágenes, etc.).
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Sirve internamente el archivo PHP correspondiente a una URL limpia.
+# Ejemplo: /omning/admin/login -> /omning/admin/login.php
 RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
+RewriteRule ^(.+)$ $1.php [L]
