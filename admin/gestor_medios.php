@@ -65,7 +65,7 @@ include 'includes/header.php';
                                     <td class="text-end">
                                         <a href="gestor_medios.php?eliminar=<?php echo urlencode($archivo); ?>" 
                                            class="btn btn-outline-danger btn-sm rounded-pill"
-                                           onclick="return confirm('¿Borrar permanentemente este archivo?');">
+                                           onclick="event.preventDefault(); confirmarAccion(this.href);">
                                             <i class="fa-solid fa-trash"></i>
                                         </a>
                                     </td>

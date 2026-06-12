@@ -200,7 +200,7 @@ include 'includes/header.php';
                                             <a href="index.php?editar=<?php echo $servicio['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="index.php?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="return confirm('¿Estás seguro de eliminar este servicio?');">
+                                            <a href="index.php?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

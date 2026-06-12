@@ -3,10 +3,12 @@ require_once 'auth.php';
 verificar_admin();
 require_once '../config/database.php';
 
+// Lógica de eliminación
 if (isset($_GET['eliminar'])) {
     $id = $_GET['eliminar'];
     try {
-        $sql = "DELETE FROM mensajes WHERE id = :id";
+        // Corregido: Ahora apunta a mensajes_contacto
+        $sql = "DELETE FROM mensajes_contacto WHERE id = :id";
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
@@ -18,6 +20,7 @@ if (isset($_GET['eliminar'])) {
     }
 }
 
+// Lógica de obtención de datos
 $sql_select = "SELECT * FROM mensajes_contacto ORDER BY fecha_envio DESC";
 $stmt_select = $conn->query($sql_select);
 $mensajes = $stmt_select->fetchAll(PDO::FETCH_ASSOC);
@@ -84,7 +87,7 @@ include 'includes/header.php';
                                     </div>
                                 </td>
                                 <td class="text-end">
-                                    <a href="gestion_mensajes.php?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="return confirm('¿Eliminar este mensaje?');">
+                                    <a href="gestion_mensajes.php?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </td>

@@ -234,7 +234,7 @@ include 'includes/header.php';
                                             <a href="usuarios.php?editar=<?php echo $user['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="usuarios.php?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="return confirm('¿Estás seguro de eliminar permanentemente a este usuario?');">
+                                            <a href="usuarios.php?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

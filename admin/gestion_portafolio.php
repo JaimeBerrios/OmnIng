@@ -250,7 +250,7 @@ include 'includes/header.php';
                                             <a href="gestion_portafolio.php?editar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="gestion_portafolio.php?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="return confirm('¿Estás seguro de eliminar este proyecto y su imagen permanentemente?');">
+                                            <a href="gestion_portafolio.php?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>
