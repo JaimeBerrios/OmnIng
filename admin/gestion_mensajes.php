@@ -18,7 +18,7 @@ if (isset($_GET['eliminar'])) {
     }
 }
 
-$sql_select = "SELECT * FROM mensajes ORDER BY fecha_creacion DESC";
+$sql_select = "SELECT * FROM mensajes_contacto ORDER BY fecha_envio DESC";
 $stmt_select = $conn->query($sql_select);
 $mensajes = $stmt_select->fetchAll(PDO::FETCH_ASSOC);
 
