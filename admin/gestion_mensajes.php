@@ -35,12 +35,12 @@ include 'includes/header.php';
         <?php if ($_GET['estado'] == 'eliminado'): ?>
             <div class="alert alert-warning alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-trash me-2"></i> Mensaje eliminado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-eliminado-mensajes-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'error'): ?>
             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-triangle-exclamation me-2"></i> Ocurrió un error en la base de datos.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-error-mensajes-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php endif; ?>
     <?php endif; ?>
@@ -67,7 +67,7 @@ include 'includes/header.php';
                                 <td><?php echo htmlspecialchars($msj['correo']); ?></td>
                                 <td><span class="badge bg-secondary"><?php echo htmlspecialchars($msj['servicio']); ?></span></td>
                                 <td>
-                                    <button type="button" class="btn btn-sm btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#modalMensaje<?php echo $msj['id']; ?>">
+                                    <button id="btn-ver-mensaje-admin-<?php echo $msj['id']; ?>" type="button" class="btn btn-sm btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#modalMensaje<?php echo $msj['id']; ?>">
                                         Ver mensaje
                                     </button>
                                     <div class="modal fade" id="modalMensaje<?php echo $msj['id']; ?>" tabindex="-1">
@@ -75,7 +75,7 @@ include 'includes/header.php';
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">Mensaje de <?php echo htmlspecialchars($msj['nombre']); ?></h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    <button id="btn-cerrar-mensaje-admin-<?php echo $msj['id']; ?>" type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <p><?php echo nl2br(htmlspecialchars($msj['mensaje'])); ?></p>
@@ -87,7 +87,7 @@ include 'includes/header.php';
                                     </div>
                                 </td>
                                 <td class="text-end">
-                                    <a href="gestion_mensajes.php?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                    <a id="btn-eliminar-mensaje-admin-<?php echo $msj['id']; ?>" href="gestion_mensajes.php?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </td>

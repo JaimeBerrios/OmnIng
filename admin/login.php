@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         <?php endif; ?>
 
-                        <form action="login.php" method="POST">
+                        <form id="form-login-admin" action="login.php" method="POST">
                             <div class="form-floating mb-3 text-start">
                                 <input type="email" class="form-control border-0 shadow-sm texto-secundario" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
                                 <label for="correo" class="text-muted">Correo electrónico</label>
@@ -80,14 +80,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input type="password" class="form-control border-0 shadow-sm texto-secundario" id="password" name="password" placeholder="Contraseña" required>
                                 <label for="password" class="text-muted">Contraseña</label>
                             </div>
-                            <button type="submit" class="btn btn-cta w-100 fw-bold rounded-pill py-3">
+                            <button id="btn-submit-login-admin" type="submit" class="btn btn-cta w-100 fw-bold rounded-pill py-3">
                                 Ingresar <i class="fa-solid fa-arrow-right ms-2"></i>
                             </button>
                         </form>
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="../index.php" class="text-light text-decoration-none opacity-75"><i class="fa-solid fa-arrow-left me-1"></i> Volver a la web pública</a>
+                    <a id="link-web-login-admin" href="../index.php" class="text-light text-decoration-none opacity-75"><i class="fa-solid fa-arrow-left me-1"></i> Volver a la web pública</a>
                 </div>
             </div>
         </div>

@@ -108,27 +108,27 @@ include 'includes/header.php';
         <?php if ($_GET['estado'] == 'agregado'): ?>
             <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-check-circle me-2"></i> Usuario creado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-agregado-usuarios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'editado'): ?>
             <div class="alert alert-info alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-pen-to-square me-2"></i> Usuario actualizado.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-editado-usuarios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'eliminado'): ?>
             <div class="alert alert-warning alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-trash me-2"></i> Usuario eliminado del sistema.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-eliminado-usuarios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'error_autoeliminacion'): ?>
             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-shield-virus me-2"></i> No puedes eliminar tu propia cuenta.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-protegido-usuarios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'error'): ?>
             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-triangle-exclamation me-2"></i> Hubo un error. Verifica los datos.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-error-usuarios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php endif; ?>
     <?php endif; ?>
@@ -141,7 +141,7 @@ include 'includes/header.php';
                     <h2 class="h4 texto-secundario mb-4 fw-bold">
                         <?php echo $usuario_editar ? '<i class="fa-solid fa-user-pen me-2"></i>Editar Usuario' : '<i class="fa-solid fa-user-plus me-2"></i>Nuevo Usuario'; ?>
                     </h2>
-                    <form action="usuarios.php" method="POST">
+                    <form id="form-usuario-admin" action="usuarios.php" method="POST">
                         
                         <?php if($usuario_editar): ?>
                             <input type="hidden" name="id" value="<?php echo $usuario_editar['id']; ?>">
@@ -175,15 +175,15 @@ include 'includes/header.php';
                         
                         <?php if($usuario_editar): ?>
                             <div class="d-flex gap-2">
-                                <button type="submit" name="editar_usuario" class="btn btn-cta w-50 fw-bold rounded-pill">
+                                <button id="btn-submit-editar-usuario-admin" type="submit" name="editar_usuario" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a href="usuarios.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-usuario-admin" href="usuarios.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
                         <?php else: ?>
-                            <button type="submit" name="agregar_usuario" class="btn btn-cta w-100 fw-bold rounded-pill">
+                            <button id="btn-submit-agregar-usuario-admin" type="submit" name="agregar_usuario" class="btn btn-cta w-100 fw-bold rounded-pill">
                                 <i class="fa-solid fa-paper-plane me-2"></i> Crear Usuario
                             </button>
                         <?php endif; ?>
@@ -231,10 +231,10 @@ include 'includes/header.php';
                                             <?php endif; ?>
                                         </td>
                                         <td class="text-end">
-                                            <a href="usuarios.php?editar=<?php echo $user['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-usuario-admin-<?php echo $user['id']; ?>" href="usuarios.php?editar=<?php echo $user['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="usuarios.php?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-usuario-admin-<?php echo $user['id']; ?>" href="usuarios.php?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

@@ -95,22 +95,22 @@ include 'includes/header.php';
         <?php if ($_GET['estado'] == 'agregado'): ?>
             <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-check-circle me-2"></i> Servicio agregado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-agregado-servicios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'editado'): ?>
             <div class="alert alert-info alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-pen-to-square me-2"></i> Servicio actualizado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-editado-servicios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'eliminado'): ?>
             <div class="alert alert-warning alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-trash me-2"></i> Servicio eliminado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-eliminado-servicios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'error'): ?>
             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-triangle-exclamation me-2"></i> Ocurrió un error en la base de datos.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-error-servicios-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php endif; ?>
     <?php endif; ?>
@@ -123,7 +123,7 @@ include 'includes/header.php';
                     <h2 class="h4 texto-secundario mb-4 fw-bold">
                         <?php echo $servicio_editar ? '<i class="fa-solid fa-pen me-2"></i>Editar Servicio' : '<i class="fa-solid fa-plus-circle me-2"></i>Nuevo Servicio'; ?>
                     </h2>
-                    <form action="index.php" method="POST">
+                    <form id="form-servicio-admin" action="index.php" method="POST">
                         
                         <?php if($servicio_editar): ?>
                             <input type="hidden" name="id" value="<?php echo $servicio_editar['id']; ?>">
@@ -144,7 +144,7 @@ include 'includes/header.php';
                         <div class="mb-3">
                             <label for="icono" class="form-label fw-bold">Clase del Ícono (FontAwesome)</label>
                             <input type="text" class="form-control bg-light border-0" id="icono" name="icono" placeholder="ej: fa-laptop-medical" value="<?php echo $servicio_editar ? htmlspecialchars($servicio_editar['icono']) : ''; ?>" required>
-                            <div class="form-text mt-2"><a href="https://fontawesome.com/search?o=r&m=free" target="_blank" class="text-decoration-none"><i class="fa-solid fa-magnifying-glass me-1"></i>Buscar íconos aquí</a></div>
+                            <div class="form-text mt-2"><a id="link-iconos-servicios-admin" href="https://fontawesome.com/search?o=r&m=free" target="_blank" class="text-decoration-none"><i class="fa-solid fa-magnifying-glass me-1"></i>Buscar íconos aquí</a></div>
                         </div>
                         <div class="mb-4">
                             <label for="descripcion" class="form-label fw-bold">Descripción Corta</label>
@@ -153,15 +153,15 @@ include 'includes/header.php';
                         
                         <?php if($servicio_editar): ?>
                             <div class="d-flex gap-2">
-                                <button type="submit" name="editar_servicio" class="btn btn-cta w-50 fw-bold rounded-pill">
+                                <button id="btn-submit-editar-servicio-admin" type="submit" name="editar_servicio" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a href="index.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-servicio-admin" href="index.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
                         <?php else: ?>
-                            <button type="submit" name="agregar_servicio" class="btn btn-cta w-100 fw-bold rounded-pill">
+                            <button id="btn-submit-agregar-servicio-admin" type="submit" name="agregar_servicio" class="btn btn-cta w-100 fw-bold rounded-pill">
                                 <i class="fa-solid fa-paper-plane me-2"></i> Guardar Servicio
                             </button>
                         <?php endif; ?>
@@ -197,10 +197,10 @@ include 'includes/header.php';
                                         <td class="fw-bold"><?php echo htmlspecialchars($servicio['titulo']); ?></td>
                                         <td><span class="badge bg-secondary"><?php echo htmlspecialchars($servicio['categoria']); ?></span></td>
                                         <td class="text-end">
-                                            <a href="index.php?editar=<?php echo $servicio['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-servicio-admin-<?php echo $servicio['id']; ?>" href="index.php?editar=<?php echo $servicio['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="index.php?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-servicio-admin-<?php echo $servicio['id']; ?>" href="index.php?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

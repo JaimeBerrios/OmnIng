@@ -36,7 +36,7 @@ include 'includes/header.php';
                         </div>
                         <div class="ms-3 contact-detail">
                             <h3 class="h5 mb-1 fw-bold">Teléfono / WhatsApp</h3>
-                            <a href="tel:+50369395620" class="text-reset text-decoration-none text-light opacity-75">+503 6939 5620</a>
+                            <a id="link-telefono-contacto" href="tel:+50369395620" class="text-reset text-decoration-none text-light opacity-75">+503 6939 5620</a>
                         </div>
                     </div>
 
@@ -46,16 +46,16 @@ include 'includes/header.php';
                         </div>
                         <div class="ms-3 contact-detail">
                             <h3 class="h5 mb-1 fw-bold">Correo Electrónico</h3>
-                            <a href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none text-light opacity-75">omningtec@gmail.com</a>
+                            <a id="link-correo-contacto" href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none text-light opacity-75">omningtec@gmail.com</a>
                         </div>
                     </div>
 
                     <h3 class="texto-primario mb-3 h5">Síguenos</h3>
                     <div class="d-flex gap-3">
-                        <a href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestra página de Facebook"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestro perfil de Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Ver nuestros videos en TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestro canal de YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a id="link-facebook-contacto" href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestra página de Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a id="link-instagram-contacto" href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestro perfil de Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a id="link-tiktok-contacto" href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Ver nuestros videos en TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a id="link-youtube-contacto" href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link fs-4" aria-label="Visitar nuestro canal de YouTube"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -67,18 +67,18 @@ include 'includes/header.php';
                         <?php if ($_GET['estado'] == 'exito'): ?>
                             <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
                                 <i class="fa-solid fa-circle-check me-2"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo muy pronto.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button id="btn-cerrar-alerta-exito-contacto" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
                             </div>
                         <?php elseif ($_GET['estado'] == 'error'): ?>
                             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                                 <i class="fa-solid fa-triangle-exclamation me-2"></i> Hubo un error al procesar tu solicitud. Por favor, intenta de nuevo o contáctanos por WhatsApp.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                                <button id="btn-cerrar-alerta-error-contacto" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
                             </div>
                         <?php endif; ?>
                     <?php endif; ?>
 
                     <h2 class="texto-secundario mb-4 h3 fw-bold">Envíanos un Mensaje</h2>
-                    <form action="procesar_contacto.php" method="POST">
+                    <form id="form-contacto-principal" action="procesar_contacto.php" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
@@ -107,7 +107,7 @@ include 'includes/header.php';
                                 <textarea class="form-control border-0 shadow-sm" id="mensaje" name="mensaje" rows="5" required></textarea>
                             </div>
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 w-100">
+                                <button id="btn-submit-contacto" type="submit" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 w-100">
                                     <i class="fa-solid fa-paper-plane me-2"></i> Enviar Mensaje
                                 </button>
                             </div>

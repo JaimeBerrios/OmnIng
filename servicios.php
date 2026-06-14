@@ -139,7 +139,7 @@ foreach ($todos_los_servicios as $servicio) {
                 <p class="mb-0 fs-5">Cada proyecto es único. Escríbenos y diseñaremos una solución a tu medida.</p>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
-                <a href="contacto.php" class="btn btn-negro btn-lg fw-bold rounded-pill px-4 py-3 shadow">
+                <a id="btn-contacto-servicios-cta" href="contacto.php" class="btn btn-negro btn-lg fw-bold rounded-pill px-4 py-3 shadow">
                     Contáctanos <i class="fa-solid fa-arrow-right ms-2"></i>
                 </a>
             </div>

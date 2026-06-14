@@ -9,16 +9,16 @@
                         Transformamos los desafíos tecnológicos en soluciones integrales. Combinamos ingeniería de software y soporte técnico de hardware.
                     </p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestra página de Facebook">
+                        <a id="link-facebook-footer" href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestra página de Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro perfil de Instagram">
+                        <a id="link-instagram-footer" href="https://www.instagram.com/omningtec/" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro perfil de Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Ver nuestros videos en TikTok">
+                        <a id="link-tiktok-footer" href="https://www.tiktok.com/@_omning_" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Ver nuestros videos en TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
-                        <a href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro canal de YouTube">
+                        <a id="link-youtube-footer" href="https://www.youtube.com/@OmningTec" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestro canal de YouTube">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div>
@@ -28,27 +28,27 @@
                     <h4 class="texto-primario mb-3">Enlaces Rápidos</h4>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-inicio-footer" href="/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-house"></i> Inicio
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/nosotros.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-nosotros-footer" href="/nosotros.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-users"></i> Nosotros
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/servicios.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-servicios-footer" href="/servicios.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-laptop-code"></i> Servicios
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/portafolio.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-portafolio-footer" href="/portafolio.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-briefcase"></i> Portafolio
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/contacto.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-contacto-footer" href="/contacto.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-envelope"></i> Contacto
                             </a>
                         </li>
@@ -64,11 +64,11 @@
                         </li>
                         <li class="mb-3 d-flex align-items-center gap-2">
                             <i class="fa-solid fa-phone" style="color: var(--color-primario);"></i>
-                            <a href="tel:+50369395620" class="text-reset text-decoration-none"><span>+503 6939 5620</span></a>
+                            <a id="link-telefono-footer" href="tel:+50369395620" class="text-reset text-decoration-none"><span>+503 6939 5620</span></a>
                         </li>
                         <li class="mb-3 d-flex align-items-center gap-2">
                             <i class="fa-solid fa-envelope" style="color: var(--color-primario);"></i>
-                            <a href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none"><span>omningtec@gmail.com</span></a>
+                            <a id="link-correo-footer" href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none"><span>omningtec@gmail.com</span></a>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +82,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="<?php echo BASE_URL; ?>assets/js/main.js"></script>
 </body>
 </html>

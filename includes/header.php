@@ -24,7 +24,7 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
     <meta property="og:description" content="<?php echo $desc; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://localhost/omning/">
-    <meta property="og:image" content="<?php echo BASE_URL; ?>assets/img/og-image.jpg">
+    <meta property="og:image" content="<?php echo BASE_URL; ?>assets/img/og-image.webp">
     
     <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/img/favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
@@ -34,45 +34,45 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
-            <a class="navbar-brand" href="/index.php">
-                <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" alt="Logotipo OmnIng" height="40">
+            <a id="link-inicio-nav-logo" class="navbar-brand" href="/index.php">
+                <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="104" height="40" alt="Logotipo OmnIng" class="img-fluid">
             </a>
             
-            <button class="navbar-toggler border-primario" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">
+            <button id="btn-menu-nav" class="navbar-toggler border-primario" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/index.php">
+                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2" href="/index.php">
                             <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/nosotros.php">
+                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2" href="/nosotros.php">
                             <i class="fa-solid fa-users"></i> Nosotros
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/servicios.php">
+                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2" href="/servicios.php">
                             <i class="fa-solid fa-laptop-code"></i> Servicios
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/portafolio.php">
+                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2" href="/portafolio.php">
                             <i class="fa-solid fa-briefcase"></i> Portafolio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/contacto.php">
+                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2" href="/contacto.php">
                             <i class="fa-solid fa-envelope"></i> Contacto
                         </a>
                     </li>
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
+                    <a id="btn-whatsapp-nav" href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
                         <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Proyecto
                     </a>
                 </div>

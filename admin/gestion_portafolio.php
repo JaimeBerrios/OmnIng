@@ -134,22 +134,22 @@ include 'includes/header.php';
         <?php if ($_GET['estado'] == 'agregado'): ?>
             <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-check-circle me-2"></i> Proyecto guardado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-agregado-portafolio-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'editado'): ?>
             <div class="alert alert-info alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-pen-to-square me-2"></i> Proyecto actualizado correctamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-editado-portafolio-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'eliminado'): ?>
             <div class="alert alert-warning alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-trash me-2"></i> Proyecto eliminado permanentemente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-eliminado-portafolio-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php elseif ($_GET['estado'] == 'error'): ?>
             <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
                 <i class="fa-solid fa-triangle-exclamation me-2"></i> Ocurrió un error en la base de datos o subida de archivo.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                <button id="btn-cerrar-alerta-error-portafolio-admin" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
             </div>
         <?php endif; ?>
     <?php endif; ?>
@@ -162,7 +162,7 @@ include 'includes/header.php';
                     <h2 class="h4 texto-secundario mb-4 fw-bold">
                         <?php echo $proyecto_editar ? '<i class="fa-solid fa-pen me-2"></i>Editar Proyecto' : '<i class="fa-solid fa-plus-circle me-2"></i>Nuevo Proyecto'; ?>
                     </h2>
-                    <form action="gestion_portafolio.php" method="POST" enctype="multipart/form-data">
+                    <form id="form-portafolio-admin" action="gestion_portafolio.php" method="POST" enctype="multipart/form-data">
                         
                         <?php if($proyecto_editar): ?>
                             <input type="hidden" name="id" value="<?php echo $proyecto_editar['id']; ?>">
@@ -186,7 +186,7 @@ include 'includes/header.php';
                             <label for="imagen" class="form-label fw-bold">Imagen del Proyecto</label>
                             <?php if($proyecto_editar && !empty($proyecto_editar['imagen'])): ?>
                                 <div class="mb-2">
-                                    <img src="<?php echo htmlspecialchars($proyecto_editar['imagen']); ?>" class="img-thumbnail" style="max-height: 100px;">
+                                    <img src="<?php echo htmlspecialchars($proyecto_editar['imagen']); ?>" width="150" height="100" class="img-fluid img-thumbnail" style="max-height: 100px; object-fit: cover;" alt="">
                                 </div>
                             <?php endif; ?>
                             <input type="file" class="form-control bg-light border-0" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg, image/webp" <?php echo $proyecto_editar ? '' : 'required'; ?>>
@@ -205,15 +205,15 @@ include 'includes/header.php';
                         
                         <?php if($proyecto_editar): ?>
                             <div class="d-flex gap-2">
-                                <button type="submit" name="guardar_proyecto" class="btn btn-cta w-50 fw-bold rounded-pill">
+                                <button id="btn-submit-editar-portafolio-admin" type="submit" name="guardar_proyecto" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a href="gestion_portafolio.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-portafolio-admin" href="gestion_portafolio.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
                         <?php else: ?>
-                            <button type="submit" name="guardar_proyecto" class="btn btn-cta w-100 fw-bold rounded-pill">
+                            <button id="btn-submit-agregar-portafolio-admin" type="submit" name="guardar_proyecto" class="btn btn-cta w-100 fw-bold rounded-pill">
                                 <i class="fa-solid fa-paper-plane me-2"></i> Guardar Proyecto
                             </button>
                         <?php endif; ?>
@@ -242,15 +242,15 @@ include 'includes/header.php';
                                     <?php foreach($proyectos as $proyecto): ?>
                                     <tr>
                                         <td>
-                                            <img src="<?php echo htmlspecialchars($proyecto['imagen']); ?>" class="img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;">
+                                            <img src="<?php echo htmlspecialchars($proyecto['imagen']); ?>" width="60" height="60" class="img-fluid img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
                                         </td>
                                         <td class="fw-bold"><?php echo htmlspecialchars($proyecto['titulo']); ?></td>
                                         <td><span class="badge bg-secondary"><?php echo htmlspecialchars($proyecto['categoria']); ?></span></td>
                                         <td class="text-end">
-                                            <a href="gestion_portafolio.php?editar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="gestion_portafolio.php?editar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a href="gestion_portafolio.php?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="gestion_portafolio.php?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>
