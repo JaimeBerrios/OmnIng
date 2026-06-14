@@ -8,9 +8,9 @@ include 'includes/header.php';
 
 <section class="bg-negro text-blanco py-5 border-bottom border-primario border-2">
     <div class="container py-lg-5">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-md-5">
             <div class="col-lg-6 order-2 order-lg-1">
-                <span class="badge bg-primario mb-3 px-3 py-2 fs-6 rounded-pill" style="color: var(--color-secundario);">
+                <span class="badge bg-primario mb-3 px-3 py-2 fs-6 rounded-pill text-wrap mw-100" style="color: var(--color-secundario);">
                     <i class="fa-solid fa-bolt me-1"></i> Soluciones 100% Personalizadas
                 </span>
                 <h1 class="display-4 fw-bold mb-4">
@@ -47,7 +47,7 @@ include 'includes/header.php';
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="/assets/img/servicio-hardware.png" class="card-img-top" alt="Soporte de Hardware">
+                    <img src="/assets/img/servicio-hardware.png" class="card-img-top img-fluid" alt="Soporte de Hardware">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-microchip fa-2x" style="color: var(--color-primario);"></i>
@@ -61,7 +61,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="/assets/img/servicio-software.png" class="card-img-top" alt="Desarrollo de Software">
+                    <img src="/assets/img/servicio-software.png" class="card-img-top img-fluid" alt="Desarrollo de Software">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-code fa-2x" style="color: var(--color-primario);"></i>
@@ -75,7 +75,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="/assets/img/casos-exito.png" class="card-img-top" alt="Nuestro Portafolio">
+                    <img src="/assets/img/casos-exito.png" class="card-img-top img-fluid" alt="Nuestro Portafolio">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-briefcase fa-2x" style="color: var(--color-primario);"></i>
@@ -92,7 +92,7 @@ include 'includes/header.php';
 
 <section class="bg-light py-5">
     <div class="container py-4">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4 g-md-5">
             <div class="col-lg-6">
                 <h2 class="texto-secundario display-6 fw-bold mb-4">¿Por qué elegir OmnIng?</h2>
                 <p class="lead text-muted mb-4">
@@ -149,7 +149,7 @@ include 'includes/header.php';
         <p class="lead w-75 mx-auto mb-4 text-light opacity-75">
             Escríbenos hoy mismo y cuéntanos sobre tu equipo dañado o la idea de software que tienes en mente. Estamos listos para ayudarte.
         </p>
-        <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg">
+        <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg fw-bold rounded-pill px-4 px-sm-5 py-3 shadow-lg text-wrap mw-100">
             <i class="fa-brands fa-whatsapp me-2 fs-4 align-middle"></i> Solicitar Asistencia Inmediata
         </a>
     </div>

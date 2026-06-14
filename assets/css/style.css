@@ -26,6 +26,16 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 
+img,
+iframe {
+    max-width: 100%;
+}
+
+.contact-detail {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Geom', sans-serif;
 }

@@ -15,16 +15,16 @@ include 'includes/header.php';
 
 <section class="py-5 my-4">
     <div class="container">
-        <div class="row g-5">
+        <div class="row g-4 g-md-5">
             <div class="col-lg-5">
-                <div class="p-5 bg-negro text-blanco rounded-4 shadow h-100 border-start border-primario border-5">
+                <div class="p-4 p-md-5 bg-negro text-blanco rounded-4 shadow h-100 border-start border-primario border-5">
                     <h2 class="texto-primario mb-4 h3">Información de Contacto</h2>
                     
                     <div class="d-flex align-items-center mb-4">
                         <div class="bg-primario text-negro rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
                             <i class="fa-solid fa-location-dot fs-5"></i>
                         </div>
-                        <div class="ms-3">
+                        <div class="ms-3 contact-detail">
                             <h3 class="h5 mb-1 fw-bold">Ubicación</h3>
                             <p class="mb-0 text-light opacity-75">San Miguel, El Salvador</p>
                         </div>
@@ -34,7 +34,7 @@ include 'includes/header.php';
                         <div class="bg-primario text-negro rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
                             <i class="fa-solid fa-phone fs-5"></i>
                         </div>
-                        <div class="ms-3">
+                        <div class="ms-3 contact-detail">
                             <h3 class="h5 mb-1 fw-bold">Teléfono / WhatsApp</h3>
                             <a href="tel:+50369395620" class="text-reset text-decoration-none text-light opacity-75">+503 6939 5620</a>
                         </div>
@@ -44,7 +44,7 @@ include 'includes/header.php';
                         <div class="bg-primario text-negro rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
                             <i class="fa-solid fa-envelope fs-5"></i>
                         </div>
-                        <div class="ms-3">
+                        <div class="ms-3 contact-detail">
                             <h3 class="h5 mb-1 fw-bold">Correo Electrónico</h3>
                             <a href="mailto:omningtec@gmail.com" class="text-reset text-decoration-none text-light opacity-75">omningtec@gmail.com</a>
                         </div>
@@ -61,7 +61,7 @@ include 'includes/header.php';
             </div>
 
             <div class="col-lg-7">
-                <div class="bg-light p-5 rounded-4 shadow-sm h-100">
+                <div class="bg-light p-4 p-md-5 rounded-4 shadow-sm h-100">
                     
                     <?php if (isset($_GET['estado'])): ?>
                         <?php if ($_GET['estado'] == 'exito'): ?>
@@ -120,7 +120,7 @@ include 'includes/header.php';
 </section>
 
 <section class="container-fluid px-0">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.845876003732!2d-88.1794276239103!3d13.483424186873523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7b2a6b2f76856d%3A0x1d5e30773dbfba!2sSan%20Miguel%2C%20El%20Salvador!5e0!3m2!1ses!2sus!4v1718151240000!5m2!1ses!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="d-block w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.845876003732!2d-88.1794276239103!3d13.483424186873523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7b2a6b2f76856d%3A0x1d5e30773dbfba!2sSan%20Miguel%2C%20El%20Salvador!5e0!3m2!1ses!2sus!4v1718151240000!5m2!1ses!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
 <?php include 'includes/footer.php'; ?>
