@@ -34,7 +34,7 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
-            <a class="navbar-brand" href="/omning/index.php">
+            <a class="navbar-brand" href="/index.php">
                 <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" alt="Logotipo OmnIng" height="40">
             </a>
             
@@ -45,27 +45,27 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/index.php">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/index.php">
                             <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/nosotros.php">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/nosotros.php">
                             <i class="fa-solid fa-users"></i> Nosotros
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/servicios.php">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/servicios.php">
                             <i class="fa-solid fa-laptop-code"></i> Servicios
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/portafolio.php">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/portafolio.php">
                             <i class="fa-solid fa-briefcase"></i> Portafolio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/omning/contacto.php">
+                        <a class="nav-link text-blanco d-flex align-items-center gap-2" href="/contacto.php">
                             <i class="fa-solid fa-envelope"></i> Contacto
                         </a>
                     </li>

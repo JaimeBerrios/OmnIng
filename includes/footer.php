@@ -28,27 +28,27 @@
                     <h4 class="texto-primario mb-3">Enlaces Rápidos</h4>
                     <ul class="list-unstyled">
                         <li class="mb-2">
-                            <a href="/omning/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a href="/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-house"></i> Inicio
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/omning/nosotros.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a href="/nosotros.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-users"></i> Nosotros
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/omning/servicios.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a href="/servicios.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-laptop-code"></i> Servicios
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/omning/portafolio.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a href="/portafolio.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-briefcase"></i> Portafolio
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a href="/omning/contacto.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a href="/contacto.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-envelope"></i> Contacto
                             </a>
                         </li>

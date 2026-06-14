@@ -1,10 +1,10 @@
 <?php
-define('BASE_URL', '/omning/');
+define('BASE_URL', '/');
 
 $host = "localhost";
-$db_name = "omning";
-$username = "root";
-$password = "";
+$db_name = "omning_db";
+$username = "omning_admin";
+$password = "OmnIngTec2026*";
 
 try {
     $conn = new PDO("mysql:host={$host};dbname={$db_name};charset=utf8mb4", $username, $password);
