@@ -1,6 +1,6 @@
 <?php 
 $page_title = "Servicios | OmnIng - Hardware y Software";
-$page_description = "Descubre nuestra oferta de servicios integrales en soporte técnico de hardware y desarrollo de software a la medida en San Miguel.";
+$page_description = "Soporte técnico para mantener tus equipos operativos y desarrollo web a medida con Google Analytics 4 y trackeo de conversiones en San Miguel.";
 
 require_once 'config/database.php';
 include 'includes/header.php'; 
@@ -26,8 +26,8 @@ foreach ($todos_los_servicios as $servicio) {
 
 <section class="bg-negro text-blanco py-5 border-bottom border-primario border-2">
     <div class="container py-4 text-center">
-        <h1 class="display-4 fw-bold texto-primario mb-3">Nuestros Servicios</h1>
-        <p class="lead w-75 mx-auto text-light opacity-75">Soluciones tecnológicas a la medida de tus necesidades, divididas en nuestras dos grandes especialidades.</p>
+        <h1 class="display-4 fw-bold texto-primario mb-3">Tecnología para operar y crecer</h1>
+        <p class="lead w-75 mx-auto text-light opacity-75">Mantenemos la infraestructura física de tu operación y construimos herramientas digitales diseñadas para generar y medir resultados.</p>
     </div>
 </section>
 
@@ -36,7 +36,7 @@ foreach ($todos_los_servicios as $servicio) {
         <div class="row mb-5 align-items-center">
             <div class="col-md-8">
                 <h2 class="display-6 fw-bold texto-secundario mb-2">Ingeniería en Hardware</h2>
-                <p class="text-muted fs-5">Mantenimiento, reparación y optimización física de tus equipos tecnológicos.</p>
+                <p class="text-muted fs-5">Mantenimiento, reparación y optimización para reducir fallas, evitar reemplazos prematuros y sostener la productividad.</p>
             </div>
             <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
                 <i class="fa-solid fa-microchip fa-4x text-light opacity-25"></i>
@@ -60,7 +60,7 @@ foreach ($todos_los_servicios as $servicio) {
                 <?php endforeach; ?>
             <?php else: ?>
                 <div class="col-12 text-center py-4">
-                    <p class="text-muted fs-5">Estamos actualizando nuestro catálogo de servicios de Hardware.</p>
+                    <p class="text-muted fs-5">Estamos preparando nuevas opciones para mejorar la operatividad y vida útil de tus equipos.</p>
                 </div>
             <?php endif; ?>
         </div>
@@ -72,7 +72,7 @@ foreach ($todos_los_servicios as $servicio) {
         <div class="row mb-5 align-items-center">
             <div class="col-md-8">
                 <h2 class="display-6 fw-bold texto-secundario mb-2">Ingeniería en Software</h2>
-                <p class="text-muted fs-5">Desarrollo de sistemas, aplicaciones y páginas web para digitalizar tu negocio.</p>
+                <p class="text-muted fs-5">Sistemas y sitios web a medida orientados a conversión, con Google Analytics 4 y trackeo de eventos para tomar decisiones basadas en datos.</p>
             </div>
             <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
                 <i class="fa-solid fa-code fa-4x text-secondary opacity-25"></i>
@@ -96,7 +96,7 @@ foreach ($todos_los_servicios as $servicio) {
                 <?php endforeach; ?>
             <?php else: ?>
                 <div class="col-12 text-center py-4">
-                    <p class="text-muted fs-5">Estamos actualizando nuestro catálogo de servicios de Software.</p>
+                    <p class="text-muted fs-5">Estamos preparando nuevas herramientas para automatizar procesos y medir el rendimiento digital.</p>
                 </div>
             <?php endif; ?>
         </div>
@@ -109,7 +109,7 @@ foreach ($todos_los_servicios as $servicio) {
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <h2 class="display-6 fw-bold texto-secundario mb-2">Otros Servicios</h2>
-                <p class="text-muted fs-5">Soluciones adicionales de diseño y tecnología.</p>
+                <p class="text-muted fs-5">Servicios complementarios para comunicar mejor, optimizar procesos y respaldar tus objetivos comerciales.</p>
             </div>
         </div>
         <div class="row g-4 justify-content-center">
@@ -135,12 +135,12 @@ foreach ($todos_los_servicios as $servicio) {
     <div class="container py-4">
         <div class="row align-items-center bg-primario text-negro rounded-4 p-5 shadow-lg">
             <div class="col-lg-8 mb-4 mb-lg-0 text-center text-lg-start">
-                <h3 class="fw-bold mb-2">¿No encuentras el servicio exacto que buscas?</h3>
-                <p class="mb-0 fs-5">Cada proyecto es único. Escríbenos y diseñaremos una solución a tu medida.</p>
+                <h3 class="fw-bold mb-2">¿Qué problema necesitas resolver?</h3>
+                <p class="mb-0 fs-5">Revisaremos tu operación, definiremos prioridades y propondremos una intervención con objetivos medibles.</p>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <a id="btn-contacto-servicios-cta" href="contacto.php" class="btn btn-negro btn-lg fw-bold rounded-pill px-4 py-3 shadow">
-                    Contáctanos <i class="fa-solid fa-arrow-right ms-2"></i>
+                    Solicitar diagnóstico <i class="fa-solid fa-arrow-right ms-2"></i>
                 </a>
             </div>
         </div>

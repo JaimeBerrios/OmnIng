@@ -1,6 +1,6 @@
 <?php 
 $page_title = "Contacto | OmnIng - Hardware y Software";
-$page_description = "Ponte en contacto con OmnIng. Solicita cotizaciones para desarrollo de software o soporte técnico de hardware en San Miguel, El Salvador.";
+$page_description = "Solicita un diagnóstico de hardware o una evaluación para desarrollar sistemas web orientados a conversión y medición de datos en San Miguel.";
 
 require_once 'config/database.php';
 include 'includes/header.php'; 
@@ -8,8 +8,8 @@ include 'includes/header.php';
 
 <section class="bg-negro text-blanco py-5 border-bottom border-primario border-2">
     <div class="container py-4 text-center">
-        <h1 class="display-4 fw-bold texto-primario mb-3">Contáctanos</h1>
-        <p class="lead w-75 mx-auto text-light opacity-75">Estamos listos para resolver tus problemas tecnológicos. Escríbenos y te responderemos a la brevedad.</p>
+        <h1 class="display-4 fw-bold texto-primario mb-3">Conversemos sobre el resultado que necesitas</h1>
+        <p class="lead w-75 mx-auto text-light opacity-75">Describe la falla, el proceso que deseas automatizar o el objetivo digital que necesitas medir. Te responderemos con un siguiente paso claro.</p>
     </div>
 </section>
 
@@ -77,7 +77,7 @@ include 'includes/header.php';
                         <?php endif; ?>
                     <?php endif; ?>
 
-                    <h2 class="texto-secundario mb-4 h3 fw-bold">Envíanos un Mensaje</h2>
+                    <h2 class="texto-secundario mb-4 h3 fw-bold">Solicita una evaluación</h2>
                     <form id="form-contacto-principal" action="procesar_contacto.php" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -93,7 +93,7 @@ include 'includes/header.php';
                                 <input type="email" class="form-control form-control-lg border-0 shadow-sm" id="correo" name="correo" required>
                             </div>
                             <div class="col-12">
-                                <label for="servicio" class="form-label fw-bold">¿En qué podemos ayudarte?</label>
+                                <label for="servicio" class="form-label fw-bold">¿Qué área necesitas mejorar?</label>
                                 <select class="form-select form-select-lg border-0 shadow-sm" id="servicio" name="servicio" required>
                                     <option value="" selected disabled>Selecciona un servicio...</option>
                                     <option value="Soporte de Hardware">Soporte y Reparación de Hardware</option>
@@ -103,12 +103,12 @@ include 'includes/header.php';
                                 </select>
                             </div>
                             <div class="col-12">
-                                <label for="mensaje" class="form-label fw-bold">Mensaje o Detalles del Proyecto</label>
+                                <label for="mensaje" class="form-label fw-bold">Problema, objetivo o detalles del proyecto</label>
                                 <textarea class="form-control border-0 shadow-sm" id="mensaje" name="mensaje" rows="5" required></textarea>
                             </div>
                             <div class="col-12 mt-4">
                                 <button id="btn-submit-contacto" type="submit" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 w-100">
-                                    <i class="fa-solid fa-paper-plane me-2"></i> Enviar Mensaje
+                                    <i class="fa-solid fa-paper-plane me-2"></i> Solicitar evaluación
                                 </button>
                             </div>
                         </div>

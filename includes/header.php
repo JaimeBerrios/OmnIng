@@ -5,8 +5,8 @@ $base_path = ($host === 'localhost') ? '/omning' : '';
 $base_url = $protocol . $host . $base_path;
 $current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
 
-$title = $page_title ?? 'OmnIng | Soluciones Integrales de Hardware y Software';
-$desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en soluciones integrales. Expertos en soporte técnico, diseño gráfico y desarrollo de software a la medida en San Miguel, El Salvador.';
+$title = $page_title ?? 'OmnIng | Hardware operativo y software medible';
+$desc = $page_description ?? 'Soporte técnico para mantener tus equipos operativos y desarrollo web orientado a conversión con Google Analytics 4 y trackeo de conversiones.';
 ?>
 <!DOCTYPE html>
 <html lang="es-SV">
@@ -74,7 +74,7 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
                 
                 <div class="d-flex">
                     <a id="btn-whatsapp-nav" href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
-                        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Proyecto
+                        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Evaluar Proyecto
                     </a>
                 </div>
             </div>

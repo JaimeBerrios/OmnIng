@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0 mb-3">
                     <p class="text-light opacity-75">
-                        Transformamos los desafíos tecnológicos en soluciones integrales. Combinamos ingeniería de software y soporte técnico de hardware.
+                        Mantenemos tus equipos operativos y desarrollamos sistemas web orientados a conversión, con analítica para medir resultados.
                     </p>
                     <div class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
                         <a id="link-facebook-footer" href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestra página de Facebook">
