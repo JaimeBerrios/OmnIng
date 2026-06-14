@@ -3,12 +3,12 @@
     <footer class="bg-negro text-blanco pt-5 pb-3 mt-5 border-top border-primario border-3">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                    <h3 class="texto-primario mb-3">OmnIng</h3>
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
+                    <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0 mb-3">
                     <p class="text-light opacity-75">
                         Transformamos los desafíos tecnológicos en soluciones integrales. Combinamos ingeniería de software y soporte técnico de hardware.
                     </p>
-                    <div class="d-flex gap-3 mt-4">
+                    <div class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
                         <a id="link-facebook-footer" href="https://www.facebook.com/omning" target="_blank" rel="noopener noreferrer" class="text-blanco nav-link d-inline-block fs-4" aria-label="Visitar nuestra página de Facebook">
                             <i class="fa-brands fa-facebook"></i>
                         </a>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <h4 class="texto-primario mb-3">Enlaces Rápidos</h4>
                     <ul class="list-unstyled">
                         <li class="mb-2">
@@ -55,7 +55,7 @@
                     </ul>
                 </div>
                 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12 text-center text-md-start">
                     <h4 class="texto-primario mb-3">Contacto</h4>
                     <ul class="list-unstyled text-light opacity-75">
                         <li class="mb-3 d-flex align-items-start gap-2">
