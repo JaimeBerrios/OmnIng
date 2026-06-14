@@ -4,6 +4,7 @@ $host = $_SERVER['HTTP_HOST'];
 $base_path = '';
 $base_url = $protocol . $host . $base_path;
 $current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
+$pagina_actual = basename($_SERVER['PHP_SELF']);
 
 $title = $page_title ?? 'OmnIng | Hardware operativo y software medible';
 $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operativos y desarrollo web orientado a conversión con Google Analytics 4 y trackeo de conversiones.';
@@ -46,27 +47,27 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2" href="/index.php">
+                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'index.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/index.php">
                             <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2" href="/nosotros.php">
+                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'nosotros.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/nosotros.php">
                             <i class="fa-solid fa-users"></i> Nosotros
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2" href="/servicios.php">
+                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'servicios.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/servicios.php">
                             <i class="fa-solid fa-laptop-code"></i> Servicios
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2" href="/portafolio.php">
+                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'portafolio.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/portafolio.php">
                             <i class="fa-solid fa-briefcase"></i> Portafolio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2" href="/contacto.php">
+                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'contacto.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/contacto.php">
                             <i class="fa-solid fa-envelope"></i> Contacto
                         </a>
                     </li>
