@@ -23,7 +23,7 @@ include 'includes/header.php';
                     <a id="btn-whatsapp-hero" href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4 py-3">
                         <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Evaluar mi proyecto
                     </a>
-                    <a id="btn-servicios-hero" href="/omning/servicios.php" class="btn btn-outline-light fw-bold rounded-pill px-4 py-3 border-2 custom-hover-btn">
+                    <a id="btn-servicios-hero" href="/servicios.php" class="btn btn-outline-light fw-bold rounded-pill px-4 py-3 border-2 custom-hover-btn">
                         <i class="fa-solid fa-arrow-right me-2 align-middle"></i> Revisar capacidades
                     </a>
                 </div>
@@ -54,7 +54,7 @@ include 'includes/header.php';
                         </div>
                         <h3 class="card-title texto-secundario h4">Hardware</h3>
                         <p class="card-text">Diagnóstico, mantenimiento y reparación de computadoras, teléfonos y tablets para reducir interrupciones, extender su vida útil y proteger tu inversión.</p>
-                        <a id="btn-servicio-hardware" href="/omning/servicios.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Evaluar mis equipos <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        <a id="btn-servicio-hardware" href="/servicios.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Evaluar mis equipos <i class="fa-solid fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@ include 'includes/header.php';
                         </div>
                         <h3 class="card-title texto-secundario h4">Software</h3>
                         <p class="card-text">Sistemas y sitios web orientados a conversión, con Google Analytics 4 y trackeo de conversiones para medir usuarios, oportunidades y retorno.</p>
-                        <a id="btn-servicio-software" href="/omning/servicios.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Planificar mi sistema <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        <a id="btn-servicio-software" href="/servicios.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Planificar mi sistema <i class="fa-solid fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@ include 'includes/header.php';
                         </div>
                         <h3 class="card-title texto-secundario h4">Proyectos Ejecutados</h3>
                         <p class="card-text">Revisa trabajos de hardware y software donde el objetivo fue resolver fallas, mejorar procesos y construir activos digitales medibles.</p>
-                        <a id="btn-ver-portafolio" href="/omning/portafolio.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Revisar proyectos <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                        <a id="btn-ver-portafolio" href="/portafolio.php" class="text-decoration-none fw-bold" style="color: var(--color-secundario);">Revisar proyectos <i class="fa-solid fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>

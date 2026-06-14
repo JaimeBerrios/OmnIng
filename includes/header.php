@@ -1,7 +1,7 @@
 <?php
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
 $host = $_SERVER['HTTP_HOST'];
-$base_path = ($host === 'localhost') ? '/omning' : ''; 
+$base_path = '';
 $base_url = $protocol . $host . $base_path;
 $current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
 
@@ -23,7 +23,7 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
     <meta property="og:title" content="<?php echo $title; ?>">
     <meta property="og:description" content="<?php echo $desc; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost/omning/">
+    <meta property="og:url" content="<?php echo $base_url; ?>/">
     <meta property="og:image" content="<?php echo BASE_URL; ?>assets/img/og-image.webp">
     
     <link rel="icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/img/favicon.ico">

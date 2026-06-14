@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['guardar_proyecto'])) {
         $ruta_destino = $directorio_subida . $nombre_nuevo;
 
         if (move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_destino)) {
-            $ruta_imagen = '/omning/assets/img/portafolio/' . $nombre_nuevo;
+            $ruta_imagen = '/assets/img/portafolio/' . $nombre_nuevo;
             $actualizar_imagen = true;
         }
     }
