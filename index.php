@@ -20,8 +20,8 @@ include 'includes/header.php';
                     Combinamos lo mejor de dos mundos: desarrollo de software a la medida y soporte técnico especializado en hardware para llevar tu tecnología al siguiente nivel.
                 </p>
                 <div class="d-flex flex-column flex-sm-row gap-3">
-                    <a href="https://wa.me/50369395620" target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4 py-3">
-                        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Ahora
+                    <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4 py-3">
+    <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Ahora
                     </a>
                     <a href="/omning/servicios.php" class="btn btn-outline-light fw-bold rounded-pill px-4 py-3 border-2 custom-hover-btn">
                         <i class="fa-solid fa-arrow-right me-2 align-middle"></i> Ver Servicios
@@ -149,8 +149,8 @@ include 'includes/header.php';
         <p class="lead w-75 mx-auto mb-4 text-light opacity-75">
             Escríbenos hoy mismo y cuéntanos sobre tu equipo dañado o la idea de software que tienes en mente. Estamos listos para ayudarte.
         </p>
-        <a href="https://wa.me/50369395620" target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg">
-            <i class="fa-brands fa-whatsapp me-2 fs-4 align-middle"></i> Solicitar Asistencia Inmediata
+        <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20necesito%20asistencia%20inmediata%20con%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg">
+    <i class="fa-brands fa-whatsapp me-2 fs-4 align-middle"></i> Solicitar Asistencia Inmediata
         </a>
     </div>
 </section>

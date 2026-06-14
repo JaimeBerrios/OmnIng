@@ -72,8 +72,8 @@ $desc = $page_description ?? 'En OmnIng transformamos desafíos tecnológicos en
                 </ul>
                 
                 <div class="d-flex">
-                    <a href="https://wa.me/50369395620" target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
-                        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Proyecto
+                    <a href="https://wa.me/50369395620?text=Hola%20OMNING,%20me%20gustaria%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="btn btn-cta fw-bold rounded-pill px-4">
+        <i class="fa-brands fa-whatsapp me-2 fs-5 align-middle"></i> Cotizar Proyecto
                     </a>
                 </div>
             </div>
