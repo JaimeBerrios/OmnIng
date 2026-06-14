@@ -26,7 +26,7 @@
                 
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <h4 class="texto-primario mb-3">Enlaces Rápidos</h4>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled d-inline-block text-start">
                         <li class="mb-2">
                             <a id="link-inicio-footer" href="/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-house"></i> Inicio
@@ -57,7 +57,7 @@
                 
                 <div class="col-lg-4 col-md-12 text-center text-md-start">
                     <h4 class="texto-primario mb-3">Contacto</h4>
-                    <ul class="list-unstyled text-light opacity-75">
+                    <ul class="list-unstyled text-light opacity-75 d-inline-block text-start">
                         <li class="mb-3 d-flex align-items-start gap-2">
                             <i class="fa-solid fa-location-dot mt-1" style="color: var(--color-primario);"></i>
                             <span>San Miguel, El Salvador</span>
