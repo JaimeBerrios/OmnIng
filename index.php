@@ -30,7 +30,7 @@ include 'includes/header.php';
             </div>
             
             <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="https://placehold.co/800x600/1a1a1a/ffd000?text=Imagen+Hero\n800x600" alt="Representación de servicios OmnIng" class="img-fluid rounded-4 shadow-lg border border-primario border-opacity-50">
+                <img src="/assets/img/hero-omning.png" alt="Representación de servicios OmnIng" class="img-fluid rounded-4 shadow-lg border border-primario border-opacity-50">
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@ include 'includes/header.php';
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="https://placehold.co/600x400/f8f9fa/1a1a1a?text=Hardware\n600x400" class="card-img-top" alt="Soporte de Hardware">
+                    <img src="/assets/img/servicio-hardware.png" class="card-img-top" alt="Soporte de Hardware">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-microchip fa-2x" style="color: var(--color-primario);"></i>
@@ -61,7 +61,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="https://placehold.co/600x400/f8f9fa/1a1a1a?text=Software\n600x400" class="card-img-top" alt="Desarrollo de Software">
+                    <img src="/assets/img/servicio-software.png" class="card-img-top" alt="Desarrollo de Software">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-code fa-2x" style="color: var(--color-primario);"></i>
@@ -75,7 +75,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="https://placehold.co/600x400/f8f9fa/1a1a1a?text=Portafolio\n600x400" class="card-img-top" alt="Nuestro Portafolio">
+                    <img src="/assets/img/casos-exito.png" class="card-img-top" alt="Nuestro Portafolio">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-briefcase fa-2x" style="color: var(--color-primario);"></i>
@@ -137,7 +137,7 @@ include 'includes/header.php';
             </div>
             
             <div class="col-lg-6">
-                <img src="https://placehold.co/600x600/1a1a1a/ffd000?text=Soporte+y+Desarrollo\n600x600" alt="Ingeniería y Soporte OmnIng" class="img-fluid rounded-4 shadow">
+                <img src="/assets/img/por-que-elegir-omning.png" alt="Ingeniería y Soporte OmnIng" class="img-fluid rounded-4 shadow">
             </div>
         </div>
     </div>
