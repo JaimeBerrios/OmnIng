@@ -25,31 +25,16 @@
                 </div>
                 
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
-                    <h4 class="texto-primario mb-3">Enlaces Rápidos</h4>
+                    <h4 class="texto-primario mb-3">Legal y Políticas</h4>
                     <ul class="list-unstyled d-inline-block text-start">
                         <li class="mb-2">
-                            <a id="link-inicio-footer" href="/index.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
-                                <i class="fa-solid fa-house"></i> Inicio
+                            <a id="link-politica-privacidad-footer" href="/politica-privacidad.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                                <i class="fa-solid fa-shield-halved"></i> Política de Privacidad
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a id="link-nosotros-footer" href="/nosotros.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
-                                <i class="fa-solid fa-users"></i> Nosotros
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a id="link-servicios-footer" href="/servicios.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
-                                <i class="fa-solid fa-laptop-code"></i> Servicios
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a id="link-portafolio-footer" href="/portafolio.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
-                                <i class="fa-solid fa-briefcase"></i> Portafolio
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a id="link-contacto-footer" href="/contacto.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
-                                <i class="fa-solid fa-envelope"></i> Contacto
+                            <a id="link-terminos-condiciones-footer" href="#" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                                <i class="fa-solid fa-file-contract"></i> Términos y Condiciones
                             </a>
                         </li>
                     </ul>

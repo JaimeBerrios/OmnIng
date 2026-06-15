@@ -33,13 +33,13 @@ foreach ($todos_los_servicios as $servicio) {
 
 <section class="py-5 my-4">
     <div class="container">
-        <div class="row mb-5 align-items-center">
-            <div class="col-md-8">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="mb-4">
+                    <i class="fa-solid fa-microchip fa-4x text-light opacity-25"></i>
+                </div>
                 <h2 class="display-6 fw-bold texto-secundario mb-2">Ingeniería en Hardware</h2>
-                <p class="text-muted fs-5">Mantenimiento, reparación y optimización para reducir fallas, evitar reemplazos prematuros y sostener la productividad.</p>
-            </div>
-            <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
-                <i class="fa-solid fa-microchip fa-4x text-light opacity-25"></i>
+                <p class="text-muted fs-5 col-lg-6 mx-auto">Mantenimiento, reparación y optimización para reducir fallas, evitar reemplazos prematuros y sostener la productividad.</p>
             </div>
         </div>
 
@@ -69,13 +69,13 @@ foreach ($todos_los_servicios as $servicio) {
 
 <section class="bg-light py-5">
     <div class="container py-4">
-        <div class="row mb-5 align-items-center">
-            <div class="col-md-8">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="mb-4">
+                    <i class="fa-solid fa-code fa-4x text-secondary opacity-25"></i>
+                </div>
                 <h2 class="display-6 fw-bold texto-secundario mb-2">Ingeniería en Software</h2>
-                <p class="text-muted fs-5">Sistemas y sitios web a medida orientados a conversión, con Google Analytics 4 y trackeo de eventos para tomar decisiones basadas en datos.</p>
-            </div>
-            <div class="col-md-4 text-md-end text-start mt-3 mt-md-0">
-                <i class="fa-solid fa-code fa-4x text-secondary opacity-25"></i>
+                <p class="text-muted fs-5 col-lg-6 mx-auto">Sistemas y sitios web a medida orientados a conversión, con Google Analytics 4 y trackeo de eventos para tomar decisiones basadas en datos.</p>
             </div>
         </div>
 
