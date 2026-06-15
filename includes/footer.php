@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a id="link-terminos-condiciones-footer" href="#" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-terminos-condiciones-footer" href="/terminos-condiciones.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-file-contract"></i> Términos y Condiciones
                             </a>
                         </li>
