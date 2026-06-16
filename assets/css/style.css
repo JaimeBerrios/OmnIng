@@ -91,6 +91,46 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-secundario);
 }
 
+/* Estilos para inputs oscuros en el login */
+.form-control-dark {
+    background-color: #1e1e1e !important;
+    border: 1px solid #444 !important;
+    color: #fff !important;
+}
+
+.form-control-dark:focus {
+    background-color: #2a2a2a !important;
+    border-color: var(--color-primario) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+    color: #fff !important;
+}
+
+/* Arreglo para que el label flote bien sobre fondo oscuro */
+.form-floating > .form-control-dark:focus ~ label,
+.form-floating > .form-control-dark:not(:placeholder-shown) ~ label {
+    color: var(--color-primario);
+    background-color: transparent;
+}
+
+.form-floating > label {
+    color: #aaa;
+}
+
+/* Boton premium */
+.btn-login {
+    background-color: var(--color-primario) !important;
+    color: #000 !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4) !important;
+    background-color: #e0a800 !important;
+}
+
 .btn-negro {
     background-color: var(--color-negro);
     color: var(--color-blanco);

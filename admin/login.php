@@ -59,12 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5 col-lg-4">
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-                    <div class="card-body p-5 bg-light text-center">
-                        <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-                            <i class="fa-solid fa-shield-halved fa-2x text-primario"></i>
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden text-white" style="background-color: #121212; border: 1px solid #333 !important;">
+                    <div class="card-body p-5 text-center text-white">
+                        <div class="bg-primario rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                            <i class="fa-solid fa-shield-halved fa-2x text-dark"></i>
                         </div>
-                        <h1 class="h3 fw-bold mb-4 texto-secundario">Acceso Seguro</h1>
+                        <h1 class="h3 fw-bold mb-4 text-white">Acceso Seguro</h1>
                         
                         <?php if ($error): ?>
                             <div class="alert alert-danger border-0 shadow-sm py-2">
@@ -74,14 +74,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <form id="form-login-admin" action="<?= BASE_URL ?>admin/login" method="POST">
                             <div class="form-floating mb-3 text-start">
-                                <input type="email" class="form-control border-0 shadow-sm texto-secundario" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
-                                <label for="correo" class="text-muted">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-dark" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+                                <label for="correo">Correo electrónico</label>
                             </div>
                             <div class="form-floating mb-4 text-start">
-                                <input type="password" class="form-control border-0 shadow-sm texto-secundario" id="password" name="password" placeholder="Contraseña" required>
-                                <label for="password" class="text-muted">Contraseña</label>
+                                <input type="password" class="form-control form-control-dark" id="password" name="password" placeholder="Contraseña" required>
+                                <label for="password">Contraseña</label>
                             </div>
-                            <button id="btn-submit-login-admin" type="submit" class="btn btn-cta w-100 fw-bold rounded-pill py-3">
+                            <button id="btn-submit-login-admin" type="submit" class="btn btn-login w-100 rounded-pill py-2">
                                 Ingresar <i class="fa-solid fa-arrow-right ms-2"></i>
                             </button>
                         </form>
