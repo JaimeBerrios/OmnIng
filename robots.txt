@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /config/
 Disallow: /includes/
 
-Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: https://omningtec.com/sitemap.xml

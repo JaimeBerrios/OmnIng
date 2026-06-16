@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
    <url>
-      <loc>https://tu-dominio.com/index.php</loc>
+      <loc>https://omningtec.com/</loc>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/logo-omning.svg</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/hero-omning.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/servicio-hardware.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/servicio-software.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/casos-exito.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/por-que-elegir-omning.webp</image:loc>
+      </image:image>
       <priority>1.0</priority>
    </url>
    <url>
-      <loc>https://tu-dominio.com/servicios.php</loc>
+      <loc>https://omningtec.com/servicios</loc>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/servicio-hardware.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/servicio-software.webp</image:loc>
+      </image:image>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tu-dominio.com/portafolio.php</loc>
+      <loc>https://omningtec.com/portafolio</loc>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/casos-exito.webp</image:loc>
+      </image:image>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://tu-dominio.com/nosotros.php</loc>
+      <loc>https://omningtec.com/nosotros</loc>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/hero-omning.webp</image:loc>
+      </image:image>
+      <image:image>
+         <image:loc>https://omningtec.com/assets/img/por-que-elegir-omning.webp</image:loc>
+      </image:image>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://tu-dominio.com/contacto.php</loc>
+      <loc>https://omningtec.com/contacto</loc>
       <priority>0.6</priority>
    </url>
 </urlset>
