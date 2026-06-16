@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_usuario'])) {
         $stmt->bindParam(':rol', $rol);
         $stmt->execute();
         
-        header("Location: usuarios.php?estado=agregado");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=agregado");
         exit();
     } catch(PDOException $e) {
-        header("Location: usuarios.php?estado=error");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=error");
         exit();
     }
 }
@@ -49,10 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['editar_usuario'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        header("Location: usuarios.php?estado=editado");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=editado");
         exit();
     } catch(PDOException $e) {
-        header("Location: usuarios.php?estado=error");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=error");
         exit();
     }
 }
@@ -61,7 +61,7 @@ if (isset($_GET['eliminar'])) {
     $id = $_GET['eliminar'];
     
     if ($id == $_SESSION['usuario_id']) {
-        header("Location: usuarios.php?estado=error_autoeliminacion");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=error_autoeliminacion");
         exit();
     }
 
@@ -71,10 +71,10 @@ if (isset($_GET['eliminar'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        header("Location: usuarios.php?estado=eliminado");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=eliminado");
         exit();
     } catch(PDOException $e) {
-        header("Location: usuarios.php?estado=error");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=error");
         exit();
     }
 }
@@ -89,7 +89,7 @@ if (isset($_GET['editar'])) {
         $stmt_edit->execute();
         $usuario_editar = $stmt_edit->fetch(PDO::FETCH_ASSOC);
     } catch(PDOException $e) {
-        header("Location: usuarios.php?estado=error");
+        header("Location: " . BASE_URL . "admin/usuarios?estado=error");
         exit();
     }
 }

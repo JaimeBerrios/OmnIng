@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['guardar_proyecto'])) {
             $stmt->bindParam(':id', $id);
             $stmt->execute();
             
-            header("Location: gestion_portafolio.php?estado=editado");
+            header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=editado");
             exit();
 
         } else {
@@ -71,11 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['guardar_proyecto'])) {
             $stmt->bindParam(':enlace', $enlace);
             $stmt->execute();
             
-            header("Location: gestion_portafolio.php?estado=agregado");
+            header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=agregado");
             exit();
         }
     } catch(PDOException $e) {
-        header("Location: gestion_portafolio.php?estado=error");
+        header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=error");
         exit();
     }
 }
@@ -99,10 +99,10 @@ if (isset($_GET['eliminar'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        header("Location: gestion_portafolio.php?estado=eliminado");
+        header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=eliminado");
         exit();
     } catch(PDOException $e) {
-        header("Location: gestion_portafolio.php?estado=error");
+        header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=error");
         exit();
     }
 }
@@ -117,7 +117,7 @@ if (isset($_GET['editar'])) {
         $stmt_edit->execute();
         $proyecto_editar = $stmt_edit->fetch(PDO::FETCH_ASSOC);
     } catch(PDOException $e) {
-        header("Location: gestion_portafolio.php?estado=error");
+        header("Location: " . BASE_URL . "admin/gestion_portafolio?estado=error");
         exit();
     }
 }

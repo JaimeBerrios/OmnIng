@@ -12,10 +12,10 @@ if (isset($_GET['eliminar'])) {
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        header("Location: gestion_mensajes.php?estado=eliminado");
+        header("Location: " . BASE_URL . "admin/gestion_mensajes?estado=eliminado");
         exit();
     } catch(PDOException $e) {
-        header("Location: gestion_mensajes.php?estado=error");
+        header("Location: " . BASE_URL . "admin/gestion_mensajes?estado=error");
         exit();
     }
 }

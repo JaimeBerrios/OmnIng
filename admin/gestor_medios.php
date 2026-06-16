@@ -11,7 +11,7 @@ if (isset($_GET['eliminar'])) {
     
     if (file_exists($ruta_completa)) {
         unlink($ruta_completa);
-        header("Location: gestor_medios.php?estado=eliminado");
+        header("Location: " . BASE_URL . "admin/gestor_medios?estado=eliminado");
         exit();
     }
 }

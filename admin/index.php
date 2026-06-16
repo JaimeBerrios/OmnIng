@@ -17,10 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['agregar_servicio'])) {
         $stmt->bindParam(':icono', $icono);
         $stmt->execute();
         
-        header("Location: index.php?estado=agregado");
+        header("Location: " . BASE_URL . "admin/?estado=agregado");
         exit();
     } catch(PDOException $e) {
-        header("Location: index.php?estado=error");
+        header("Location: " . BASE_URL . "admin/?estado=error");
         exit();
     }
 }
@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['editar_servicio'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        header("Location: index.php?estado=editado");
+        header("Location: " . BASE_URL . "admin/?estado=editado");
         exit();
     } catch(PDOException $e) {
-        header("Location: index.php?estado=error");
+        header("Location: " . BASE_URL . "admin/?estado=error");
         exit();
     }
 }
@@ -58,10 +58,10 @@ if (isset($_GET['eliminar'])) {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         
-        header("Location: index.php?estado=eliminado");
+        header("Location: " . BASE_URL . "admin/?estado=eliminado");
         exit();
     } catch(PDOException $e) {
-        header("Location: index.php?estado=error");
+        header("Location: " . BASE_URL . "admin/?estado=error");
         exit();
     }
 }
@@ -76,7 +76,7 @@ if (isset($_GET['editar'])) {
         $stmt_edit->execute();
         $servicio_editar = $stmt_edit->fetch(PDO::FETCH_ASSOC);
     } catch(PDOException $e) {
-        header("Location: index.php?estado=error");
+        header("Location: " . BASE_URL . "admin/?estado=error");
         exit();
     }
 }

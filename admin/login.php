@@ -3,7 +3,7 @@ session_start();
 require_once '../config/database.php';
 
 if (isset($_SESSION['usuario_id'])) {
-    header("Location: index.php");
+    header("Location: " . BASE_URL . "admin/");
     exit();
 }
 
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario_id'] = $usuario['id'];
             $_SESSION['usuario_nombre'] = $usuario['nombre'];
             $_SESSION['usuario_rol'] = $usuario['rol'];
-            header("Location: index.php");
+            header("Location: " . BASE_URL . "admin/");
             exit();
         } else {
             $error = 'Contraseña incorrecta.';
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         <?php endif; ?>
 
-                        <form id="form-login-admin" action="login.php" method="POST">
+                        <form id="form-login-admin" action="<?= BASE_URL ?>admin/login" method="POST">
                             <div class="form-floating mb-3 text-start">
                                 <input type="email" class="form-control border-0 shadow-sm texto-secundario" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
                                 <label for="correo" class="text-muted">Correo electrónico</label>
