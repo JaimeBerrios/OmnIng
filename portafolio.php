@@ -25,7 +25,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4 custom-hover-card">
                             <div class="position-relative">
-                                <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="600" height="400" class="card-img-top img-fluid w-100" alt="<?php echo htmlspecialchars($proyecto['titulo']); ?>" style="height: 240px; object-fit: cover;">
+                                <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="600" height="400" loading="lazy" class="card-img-top img-fluid w-100" alt="<?php echo htmlspecialchars($proyecto['titulo']); ?>" style="height: 240px; object-fit: cover;">
                                 <span class="badge bg-negro text-primario position-absolute top-0 start-0 m-3 border border-primario px-3 py-2 rounded-pill fw-bold">
                                     <?php if ($proyecto['categoria'] == 'Hardware'): ?>
                                         <i class="fa-solid fa-microchip me-1"></i> Hardware

@@ -59,7 +59,7 @@ include 'includes/header.php';
                             <?php foreach ($archivos_huerfanos as $archivo): ?>
                                 <tr>
                                     <td>
-                                        <img src="<?php echo BASE_URL; ?>assets/img/portafolio/<?php echo htmlspecialchars($archivo); ?>" width="50" height="50" class="img-fluid rounded" style="width: 50px; height: 50px; object-fit: cover;" alt="">
+                                        <img src="<?php echo BASE_URL; ?>assets/img/portafolio/<?php echo htmlspecialchars($archivo); ?>" width="50" height="50" loading="lazy" class="img-fluid rounded" style="width: 50px; height: 50px; object-fit: cover;" alt="">
                                     </td>
                                     <td><code><?php echo htmlspecialchars($archivo); ?></code></td>
                                     <td class="text-end">

@@ -5,7 +5,7 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
                     <a id="link-inicio-footer-logo" href="<?= BASE_URL ?>" class="d-inline-block mb-3">
-                        <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0">
+                        <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" height="58" loading="lazy" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0">
                     </a>
                     <p class="text-light opacity-75">
                         Mantenemos tus equipos operativos y desarrollamos sistemas web orientados a conversión, con analítica para medir resultados.

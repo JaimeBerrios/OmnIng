@@ -188,7 +188,7 @@ include 'includes/header.php';
                             <label for="imagen" class="form-label fw-bold">Imagen del Proyecto</label>
                             <?php if($proyecto_editar && !empty($proyecto_editar['imagen'])): ?>
                                 <div class="mb-2">
-                                    <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto_editar['imagen']), '/'); ?>" width="150" height="100" class="img-fluid img-thumbnail" style="max-height: 100px; object-fit: cover;" alt="">
+                                    <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto_editar['imagen']), '/'); ?>" width="150" height="100" loading="lazy" class="img-fluid img-thumbnail" style="max-height: 100px; object-fit: cover;" alt="">
                                 </div>
                             <?php endif; ?>
                             <input type="file" class="form-control bg-light border-0" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg, image/webp" <?php echo $proyecto_editar ? '' : 'required'; ?>>
@@ -244,7 +244,7 @@ include 'includes/header.php';
                                     <?php foreach($proyectos as $proyecto): ?>
                                     <tr>
                                         <td>
-                                            <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="60" height="60" class="img-fluid img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                            <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="60" height="60" loading="lazy" class="img-fluid img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
                                         </td>
                                         <td class="fw-bold"><?php echo htmlspecialchars($proyecto['titulo']); ?></td>
                                         <td><span class="badge bg-secondary"><?php echo htmlspecialchars($proyecto['categoria']); ?></span></td>

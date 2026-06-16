@@ -38,7 +38,7 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
             <a id="link-inicio-nav-logo" class="navbar-brand" href="<?= BASE_URL ?>">
-                <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="104" height="40" alt="Logotipo OmnIng" class="img-fluid">
+                <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="104" height="40" loading="lazy" alt="Logotipo OmnIng" class="img-fluid">
             </a>
             
             <button id="btn-menu-nav" class="navbar-toggler border-primario" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">

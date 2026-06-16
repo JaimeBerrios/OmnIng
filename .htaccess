@@ -15,24 +15,33 @@ Options -MultiViews
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
-    # Evitar que se aplique si es una carpeta fisica
+    # Evitar que se aplique si es una carpeta física
     RewriteCond %{REQUEST_FILENAME} !-d
 
-    # Comprobar si el archivo con extension .php existe
+    # Comprobar si el archivo con extensión .php existe
     RewriteCond %{REQUEST_FILENAME}.php -f
 
     # Ejecutar internamente el archivo .php correspondiente
     RewriteRule ^(.*)$ $1.php [L]
 </IfModule>
 
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml font/woff2
+</IfModule>
+
 <IfModule mod_expires.c>
     ExpiresActive On
+    
+    # Caché de imágenes y fuentes (1 año)
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # Caché de estilos y scripts (1 mes)
     ExpiresByType text/css "access plus 1 month"
     ExpiresByType application/javascript "access plus 1 month"
     ExpiresByType text/javascript "access plus 1 month"

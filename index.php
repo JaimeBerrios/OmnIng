@@ -47,7 +47,7 @@ include 'includes/header.php';
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="<?= BASE_URL ?>assets/img/servicio-hardware.webp" width="600" height="400" class="card-img-top img-fluid" alt="Soporte de Hardware">
+                    <img src="<?= BASE_URL ?>assets/img/servicio-hardware.webp" width="600" height="400" loading="lazy" class="card-img-top img-fluid" alt="Soporte de Hardware">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-microchip fa-2x" style="color: var(--color-primario);"></i>
@@ -61,7 +61,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="<?= BASE_URL ?>assets/img/servicio-software.webp" width="600" height="400" class="card-img-top img-fluid" alt="Desarrollo de Software">
+                    <img src="<?= BASE_URL ?>assets/img/servicio-software.webp" width="600" height="400" loading="lazy" class="card-img-top img-fluid" alt="Desarrollo de Software">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-code fa-2x" style="color: var(--color-primario);"></i>
@@ -75,7 +75,7 @@ include 'includes/header.php';
             
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-0 shadow-sm text-center">
-                    <img src="<?= BASE_URL ?>assets/img/casos-exito.webp" width="600" height="400" class="card-img-top img-fluid" alt="Nuestro Portafolio">
+                    <img src="<?= BASE_URL ?>assets/img/casos-exito.webp" width="600" height="400" loading="lazy" class="card-img-top img-fluid" alt="Nuestro Portafolio">
                     <div class="card-body p-4">
                         <div class="bg-negro rounded-circle d-inline-flex align-items-center justify-content-center mb-3 mt-n5 position-relative shadow" style="width: 70px; height: 70px;">
                             <i class="fa-solid fa-briefcase fa-2x" style="color: var(--color-primario);"></i>
@@ -137,7 +137,7 @@ include 'includes/header.php';
             </div>
             
             <div class="col-lg-6">
-                <img src="<?= BASE_URL ?>assets/img/por-que-elegir-omning.webp" width="600" height="600" alt="Ingeniería y Soporte OmnIng" class="img-fluid rounded-4 shadow">
+                <img src="<?= BASE_URL ?>assets/img/por-que-elegir-omning.webp" width="600" height="600" loading="lazy" alt="Ingeniería y Soporte OmnIng" class="img-fluid rounded-4 shadow">
             </div>
         </div>
     </div>
