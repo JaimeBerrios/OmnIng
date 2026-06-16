@@ -87,7 +87,7 @@ include 'includes/header.php';
                                     </div>
                                 </td>
                                 <td class="text-end">
-                                    <a id="btn-eliminar-mensaje-admin-<?php echo $msj['id']; ?>" href="gestion_mensajes.php?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                    <a id="btn-eliminar-mensaje-admin-<?php echo $msj['id']; ?>" href="<?= BASE_URL ?>admin/gestion_mensajes?eliminar=<?php echo $msj['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                         <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </td>

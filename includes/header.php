@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__ . '/../config/database.php';
+
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" : "http://";
 $host = $_SERVER['HTTP_HOST'];
-$base_path = '';
-$base_url = $protocol . $host . $base_path;
+$base_url = $protocol . $host . BASE_URL;
 $current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
 $pagina_actual = basename($_SERVER['PHP_SELF']);
 
@@ -36,7 +37,7 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top py-3">
         <div class="container">
-            <a id="link-inicio-nav-logo" class="navbar-brand" href="/index.php">
+            <a id="link-inicio-nav-logo" class="navbar-brand" href="<?= BASE_URL ?>">
                 <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="104" height="40" alt="Logotipo OmnIng" class="img-fluid">
             </a>
             
@@ -47,27 +48,27 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'index.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/index.php">
+                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'index.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>">
                             <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'nosotros.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/nosotros.php">
+                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'nosotros.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>nosotros">
                             <i class="fa-solid fa-users"></i> Nosotros
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'servicios.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/servicios.php">
+                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'servicios.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>servicios">
                             <i class="fa-solid fa-laptop-code"></i> Servicios
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'portafolio.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/portafolio.php">
+                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'portafolio.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>portafolio">
                             <i class="fa-solid fa-briefcase"></i> Portafolio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'contacto.php' ? 'active fw-bold texto-primario' : ''; ?>" href="/contacto.php">
+                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'contacto.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>contacto">
                             <i class="fa-solid fa-envelope"></i> Contacto
                         </a>
                     </li>

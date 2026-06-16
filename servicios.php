@@ -139,7 +139,7 @@ foreach ($todos_los_servicios as $servicio) {
                 <p class="mb-0 fs-5">Revisaremos tu operación, definiremos prioridades y propondremos una intervención con objetivos medibles.</p>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
-                <a id="btn-contacto-servicios-cta" href="contacto.php" class="btn btn-negro btn-lg fw-bold rounded-pill px-4 py-3 shadow">
+                <a id="btn-contacto-servicios-cta" href="<?= BASE_URL ?>contacto" class="btn btn-negro btn-lg fw-bold rounded-pill px-4 py-3 shadow">
                     Solicitar diagnóstico <i class="fa-solid fa-arrow-right ms-2"></i>
                 </a>
             </div>

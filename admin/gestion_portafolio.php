@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['guardar_proyecto'])) {
         $ruta_destino = $directorio_subida . $nombre_nuevo;
 
         if (move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_destino)) {
-            $ruta_imagen = '/assets/img/portafolio/' . $nombre_nuevo;
+            $ruta_imagen = 'assets/img/portafolio/' . $nombre_nuevo;
             $actualizar_imagen = true;
         }
     }
@@ -38,8 +38,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['guardar_proyecto'])) {
                 $stmt_old->execute();
                 $old_img = $stmt_old->fetchColumn();
                 
-                if ($old_img && file_exists($_SERVER['DOCUMENT_ROOT'] . $old_img)) {
-                    unlink($_SERVER['DOCUMENT_ROOT'] . $old_img);
+                $old_img_path = __DIR__ . '/../' . ltrim($old_img, '/');
+                if ($old_img && file_exists($old_img_path)) {
+                    unlink($old_img_path);
                 }
 
                 $sql = "UPDATE portafolio SET titulo = :titulo, descripcion = :descripcion, categoria = :categoria, enlace = :enlace, imagen = :imagen WHERE id = :id";
@@ -88,8 +89,9 @@ if (isset($_GET['eliminar'])) {
         $stmt_img->execute();
         $imagen_borrar = $stmt_img->fetchColumn();
 
-        if ($imagen_borrar && file_exists($_SERVER['DOCUMENT_ROOT'] . $imagen_borrar)) {
-            unlink($_SERVER['DOCUMENT_ROOT'] . $imagen_borrar);
+        $imagen_borrar_path = __DIR__ . '/../' . ltrim($imagen_borrar, '/');
+        if ($imagen_borrar && file_exists($imagen_borrar_path)) {
+            unlink($imagen_borrar_path);
         }
 
         $sql = "DELETE FROM portafolio WHERE id = :id";
@@ -186,7 +188,7 @@ include 'includes/header.php';
                             <label for="imagen" class="form-label fw-bold">Imagen del Proyecto</label>
                             <?php if($proyecto_editar && !empty($proyecto_editar['imagen'])): ?>
                                 <div class="mb-2">
-                                    <img src="<?php echo htmlspecialchars($proyecto_editar['imagen']); ?>" width="150" height="100" class="img-fluid img-thumbnail" style="max-height: 100px; object-fit: cover;" alt="">
+                                    <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto_editar['imagen']), '/'); ?>" width="150" height="100" class="img-fluid img-thumbnail" style="max-height: 100px; object-fit: cover;" alt="">
                                 </div>
                             <?php endif; ?>
                             <input type="file" class="form-control bg-light border-0" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg, image/webp" <?php echo $proyecto_editar ? '' : 'required'; ?>>
@@ -208,7 +210,7 @@ include 'includes/header.php';
                                 <button id="btn-submit-editar-portafolio-admin" type="submit" name="guardar_proyecto" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a id="btn-cancelar-editar-portafolio-admin" href="gestion_portafolio.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-portafolio-admin" href="<?= BASE_URL ?>admin/gestion_portafolio" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
@@ -242,15 +244,15 @@ include 'includes/header.php';
                                     <?php foreach($proyectos as $proyecto): ?>
                                     <tr>
                                         <td>
-                                            <img src="<?php echo htmlspecialchars($proyecto['imagen']); ?>" width="60" height="60" class="img-fluid img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
+                                            <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="60" height="60" class="img-fluid img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;" alt="">
                                         </td>
                                         <td class="fw-bold"><?php echo htmlspecialchars($proyecto['titulo']); ?></td>
                                         <td><span class="badge bg-secondary"><?php echo htmlspecialchars($proyecto['categoria']); ?></span></td>
                                         <td class="text-end">
-                                            <a id="btn-editar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="gestion_portafolio.php?editar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="<?= BASE_URL ?>admin/gestion_portafolio?editar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a id="btn-eliminar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="gestion_portafolio.php?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-portafolio-admin-<?php echo $proyecto['id']; ?>" href="<?= BASE_URL ?>admin/gestion_portafolio?eliminar=<?php echo $proyecto['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

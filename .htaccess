@@ -1,27 +1,29 @@
 Options -MultiViews
-RewriteEngine On
 
-# Cambiamos /omning/ por / porque ahora el sitio está en la raíz del servidor
-RewriteBase /
+<IfModule mod_rewrite.c>
+    RewriteEngine On
 
-# 1. Redirige index.php a la carpeta limpia (protegiendo peticiones POST)
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.php(?:[\s?]) [NC]
-RewriteRule ^(.*/)?index\.php$ /$1 [R=301,L,NE]
+    RewriteCond %{REQUEST_METHOD} !POST
+    RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.php(?:[\s?]) [NC]
+    RewriteRule ^(.*/)?index\.php$ $1 [R=301,L,NE]
 
-# 2. Redirige URLs con .php a la versión limpia (protegiendo peticiones POST)
-RewriteCond %{REQUEST_METHOD} !POST
-RewriteCond %{THE_REQUEST} \s/+[^?\s]*\.php(?:[\s?]) [NC]
-RewriteRule ^(.+)\.php$ /$1 [R=301,L,NE]
+    RewriteCond %{REQUEST_METHOD} !POST
+    RewriteCond %{THE_REQUEST} \s/+[^?\s]*\.php(?:[\s?]) [NC]
+    RewriteRule ^(.+)\.php$ $1 [R=301,L,NE]
 
-# 3. No reescribe archivos físicos reales (CSS, JS, imágenes, etc.)
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
 
-# 4. Sirve internamente el archivo PHP correspondiente a una URL limpia
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L]
+    # Evitar que se aplique si es una carpeta fisica
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Comprobar si el archivo con extension .php existe
+    RewriteCond %{REQUEST_FILENAME}.php -f
+
+    # Ejecutar internamente el archivo .php correspondiente
+    RewriteRule ^(.*)$ $1.php [L]
+</IfModule>
 
 <IfModule mod_expires.c>
     ExpiresActive On

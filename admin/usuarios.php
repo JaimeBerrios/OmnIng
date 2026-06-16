@@ -178,7 +178,7 @@ include 'includes/header.php';
                                 <button id="btn-submit-editar-usuario-admin" type="submit" name="editar_usuario" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a id="btn-cancelar-editar-usuario-admin" href="usuarios.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-usuario-admin" href="<?= BASE_URL ?>admin/usuarios" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
@@ -231,10 +231,10 @@ include 'includes/header.php';
                                             <?php endif; ?>
                                         </td>
                                         <td class="text-end">
-                                            <a id="btn-editar-usuario-admin-<?php echo $user['id']; ?>" href="usuarios.php?editar=<?php echo $user['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-usuario-admin-<?php echo $user['id']; ?>" href="<?= BASE_URL ?>admin/usuarios?editar=<?php echo $user['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a id="btn-eliminar-usuario-admin-<?php echo $user['id']; ?>" href="usuarios.php?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-usuario-admin-<?php echo $user['id']; ?>" href="<?= BASE_URL ?>admin/usuarios?eliminar=<?php echo $user['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3 <?php echo ($user['id'] == $_SESSION['usuario_id']) ? 'disabled' : ''; ?>" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>

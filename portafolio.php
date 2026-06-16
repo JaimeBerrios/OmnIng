@@ -25,7 +25,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 border-0 shadow-sm overflow-hidden rounded-4 custom-hover-card">
                             <div class="position-relative">
-                                <img src="<?php echo htmlspecialchars($proyecto['imagen']); ?>" width="600" height="400" class="card-img-top img-fluid w-100" alt="<?php echo htmlspecialchars($proyecto['titulo']); ?>" style="height: 240px; object-fit: cover;">
+                                <img src="<?php echo BASE_URL . ltrim(htmlspecialchars($proyecto['imagen']), '/'); ?>" width="600" height="400" class="card-img-top img-fluid w-100" alt="<?php echo htmlspecialchars($proyecto['titulo']); ?>" style="height: 240px; object-fit: cover;">
                                 <span class="badge bg-negro text-primario position-absolute top-0 start-0 m-3 border border-primario px-3 py-2 rounded-pill fw-bold">
                                     <?php if ($proyecto['categoria'] == 'Hardware'): ?>
                                         <i class="fa-solid fa-microchip me-1"></i> Hardware
@@ -45,7 +45,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <i class="fa-solid fa-arrow-up-right-from-square me-2"></i> Revisar Proyecto en Vivo
                                     </a>
                                 <?php else: ?>
-                                    <a id="btn-concluido-portafolio-<?php echo $proyecto['id']; ?>" href="contacto.php" class="btn btn-light bg-light text-muted fw-bold rounded-pill w-100 py-2 border-0 mt-auto disabled opacity-50">
+                                    <a id="btn-concluido-portafolio-<?php echo $proyecto['id']; ?>" href="<?= BASE_URL ?>contacto" class="btn btn-light bg-light text-muted fw-bold rounded-pill w-100 py-2 border-0 mt-auto disabled opacity-50">
                                         <i class="fa-solid fa-circle-check me-2"></i> Proyecto Entregado
                                     </a>
                                 <?php endif; ?>
@@ -60,7 +60,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <h2 class="h3 fw-bold texto-secundario mb-3">Estamos documentando nuevos proyectos</h2>
                     <p class="text-muted w-50 mx-auto">Pronto publicaremos intervenciones de soporte y desarrollos de software con sus objetivos, proceso y resultados.</p>
-                    <a id="btn-inicio-portafolio-vacio" href="index.php" class="btn btn-cta fw-bold rounded-pill px-4 py-2 mt-3">Revisar nuestros servicios</a>
+                    <a id="btn-inicio-portafolio-vacio" href="<?= BASE_URL ?>" class="btn btn-cta fw-bold rounded-pill px-4 py-2 mt-3">Revisar nuestros servicios</a>
                 </div>
             <?php endif; ?>
         </div>
@@ -71,7 +71,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="container py-4 text-center">
         <h2 class="display-6 fw-bold texto-secundario mb-3">¿Qué necesita mejorar tu operación?</h2>
         <p class="lead w-50 mx-auto mb-4 text-muted">Analizaremos el problema, el impacto esperado y los indicadores que permitirán comprobar el resultado.</p>
-        <a id="btn-contacto-portafolio-cta" href="contacto.php" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 py-3 shadow">
+        <a id="btn-contacto-portafolio-cta" href="<?= BASE_URL ?>contacto" class="btn btn-cta btn-lg fw-bold rounded-pill px-5 py-3 shadow">
             <i class="fa-solid fa-comments me-2"></i> Solicitar evaluación del proyecto
         </a>
     </div>

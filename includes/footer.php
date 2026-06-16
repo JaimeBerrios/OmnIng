@@ -4,7 +4,9 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 text-center text-md-start">
-                    <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0 mb-3">
+                    <a id="link-inicio-footer-logo" href="<?= BASE_URL ?>" class="d-inline-block mb-3">
+                        <img src="<?php echo BASE_URL; ?>assets/img/logo-omning.svg" width="150" alt="Logotipo OmnIng" class="img-fluid d-block mx-auto mx-md-0">
+                    </a>
                     <p class="text-light opacity-75">
                         Mantenemos tus equipos operativos y desarrollamos sistemas web orientados a conversión, con analítica para medir resultados.
                     </p>
@@ -28,12 +30,12 @@
                     <h4 class="texto-primario mb-3">Legal y Políticas</h4>
                     <ul class="list-unstyled d-inline-block text-start">
                         <li class="mb-2">
-                            <a id="link-politica-privacidad-footer" href="/politica-privacidad.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-politica-privacidad-footer" href="<?= BASE_URL ?>politica-privacidad" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-shield-halved"></i> Política de Privacidad
                             </a>
                         </li>
                         <li class="mb-2">
-                            <a id="link-terminos-condiciones-footer" href="/terminos-condiciones.php" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
+                            <a id="link-terminos-condiciones-footer" href="<?= BASE_URL ?>terminos-condiciones" class="text-blanco text-decoration-none nav-link d-inline-flex align-items-center gap-2">
                                 <i class="fa-solid fa-file-contract"></i> Términos y Condiciones
                             </a>
                         </li>

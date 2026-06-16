@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
 </head>
 <body class="bg-negro d-flex align-items-center justify-content-center vh-100">
 
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
                 <div class="text-center mt-4">
-                    <a id="link-web-login-admin" href="../index.php" class="text-light text-decoration-none opacity-75"><i class="fa-solid fa-arrow-left me-1"></i> Volver a la web pública</a>
+                    <a id="link-web-login-admin" href="<?= BASE_URL ?>" class="text-light text-decoration-none opacity-75"><i class="fa-solid fa-arrow-left me-1"></i> Volver a la web pública</a>
                 </div>
             </div>
         </div>

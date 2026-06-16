@@ -15,4 +15,8 @@ Thumbs.db
 *.njsproj
 *.sln
 
+respaldo_omning.sql
+*.sql
 *.log
+.env
+error_log

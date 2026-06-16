@@ -156,7 +156,7 @@ include 'includes/header.php';
                                 <button id="btn-submit-editar-servicio-admin" type="submit" name="editar_servicio" class="btn btn-cta w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-save me-1"></i> Actualizar
                                 </button>
-                                <a id="btn-cancelar-editar-servicio-admin" href="index.php" class="btn btn-secondary w-50 fw-bold rounded-pill">
+                                <a id="btn-cancelar-editar-servicio-admin" href="<?= BASE_URL ?>admin/" class="btn btn-secondary w-50 fw-bold rounded-pill">
                                     <i class="fa-solid fa-xmark me-1"></i> Cancelar
                                 </a>
                             </div>
@@ -197,10 +197,10 @@ include 'includes/header.php';
                                         <td class="fw-bold"><?php echo htmlspecialchars($servicio['titulo']); ?></td>
                                         <td><span class="badge bg-secondary"><?php echo htmlspecialchars($servicio['categoria']); ?></span></td>
                                         <td class="text-end">
-                                            <a id="btn-editar-servicio-admin-<?php echo $servicio['id']; ?>" href="index.php?editar=<?php echo $servicio['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
+                                            <a id="btn-editar-servicio-admin-<?php echo $servicio['id']; ?>" href="<?= BASE_URL ?>admin/?editar=<?php echo $servicio['id']; ?>" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-1">
                                                 <i class="fa-solid fa-pen"></i>
                                             </a>
-                                            <a id="btn-eliminar-servicio-admin-<?php echo $servicio['id']; ?>" href="index.php?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
+                                            <a id="btn-eliminar-servicio-admin-<?php echo $servicio['id']; ?>" href="<?= BASE_URL ?>admin/?eliminar=<?php echo $servicio['id']; ?>" class="btn btn-outline-danger btn-sm rounded-pill px-3" onclick="event.preventDefault(); confirmarAccion(this.href);">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>
                                         </td>
