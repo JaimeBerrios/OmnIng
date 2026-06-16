@@ -38,18 +38,18 @@ iframe {
     overflow-wrap: anywhere;
 }
 
+.texto-secundario,
+.texto-primario,
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Geom', sans-serif;
 }
 
 .texto-primario {
     color: var(--color-primario);
-    font-family: 'Geom', sans-serif;
 }
 
 .texto-secundario {
     color: var(--color-secundario);
-    font-family: 'Geom', sans-serif;
 }
 
 .text-blanco {
@@ -74,33 +74,32 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--color-primario) !important;
 }
 
+.custom-hover-btn,
+.btn-negro,
+.btn-cta {
+    transition: all 0.3s ease;
+}
+
 .btn-cta {
     background-color: var(--color-primario);
     color: var(--color-secundario);
     border: 2px solid var(--color-primario);
-    transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
     background-color: var(--color-blanco);
     color: var(--color-secundario);
-    border: 2px solid var(--color-primario);
 }
 
 .btn-negro {
     background-color: var(--color-negro);
     color: var(--color-blanco);
     border: 2px solid var(--color-negro);
-    transition: all 0.3s ease;
 }
 
 .btn-negro:hover {
     background-color: transparent;
     color: var(--color-negro);
-}
-
-.custom-hover-btn {
-    transition: all 0.3s ease;
 }
 
 .custom-hover-btn:hover {
@@ -128,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .custom-hover-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 
 .text-muted {
@@ -184,15 +183,6 @@ input.bg-primario {
     background-color: var(--color-negro) !important;
     color: var(--color-blanco) !important;
     border-color: var(--color-negro) !important;
-}
-
-.btn-primario:focus-visible,
-.btn-alerta-confirmar:focus-visible,
-.btn-secundario:focus-visible,
-.btn-alerta-cancelar:focus-visible,
-.btn-alerta-denegar:focus-visible {
-    outline: 3px solid var(--color-negro) !important;
-    outline-offset: 3px;
 }
 
 body .btn.btn-primary {
@@ -311,15 +301,6 @@ body .btn.btn-outline-light {
     --bs-btn-active-border-color: var(--color-primario);
 }
 
-body .btn.btn-primary:focus-visible,
-body .btn.btn-secondary:focus-visible,
-body .btn.btn-outline-primary:focus-visible,
-body .btn.btn-outline-danger:focus-visible,
-body .btn.btn-outline-dark:focus-visible {
-    outline: 3px solid var(--color-negro);
-    outline-offset: 3px;
-}
-
 body .btn.btn-outline-light:focus-visible {
     outline: 3px solid var(--color-primario);
     outline-offset: 3px;
@@ -347,32 +328,37 @@ body .table > .table-light {
     --bs-table-border-color: var(--color-terciario);
 }
 
+body .bg-success,
 body .bg-secondary {
-    background-color: var(--color-secundario) !important;
     color: var(--color-blanco);
 }
 
 body .bg-success {
     background-color: var(--color-terciario) !important;
-    color: var(--color-blanco);
+}
+
+body .bg-secondary {
+    background-color: var(--color-secundario) !important;
 }
 
 body .border-secondary {
     border-color: var(--color-primario) !important;
 }
 
+.alert-danger,
 .alert-success {
     --bs-alert-color: var(--color-blanco);
-    --bs-alert-bg: var(--color-terciario);
-    --bs-alert-border-color: var(--color-terciario);
     --bs-alert-link-color: var(--color-blanco);
 }
 
+.alert-success {
+    --bs-alert-bg: var(--color-terciario);
+    --bs-alert-border-color: var(--color-terciario);
+}
+
 .alert-danger {
-    --bs-alert-color: var(--color-blanco);
     --bs-alert-bg: var(--color-negro);
     --bs-alert-border-color: var(--color-negro);
-    --bs-alert-link-color: var(--color-blanco);
 }
 
 .alert-warning,
@@ -387,4 +373,26 @@ body .border-secondary {
 .alert-danger .btn-close {
     filter: invert(1);
     opacity: 1;
+}
+
+body .btn.btn-primary:focus-visible,
+body .btn.btn-secondary:focus-visible,
+body .btn.btn-outline-primary:focus-visible,
+body .btn.btn-outline-danger:focus-visible,
+body .btn.btn-outline-dark:focus-visible,
+.btn-primario:focus-visible,
+.btn-alerta-confirmar:focus-visible,
+.btn-secundario:focus-visible,
+.btn-alerta-cancelar:focus-visible,
+.btn-alerta-denegar:focus-visible {
+    outline: 3px solid var(--color-negro);
+    outline-offset: 3px;
+}
+
+.btn-primario:focus-visible,
+.btn-alerta-confirmar:focus-visible,
+.btn-secundario:focus-visible,
+.btn-alerta-cancelar:focus-visible,
+.btn-alerta-denegar:focus-visible {
+    outline: 3px solid var(--color-negro) !important;
 }
