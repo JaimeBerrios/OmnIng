@@ -5,7 +5,7 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://" 
 $host = $_SERVER['HTTP_HOST'];
 $base_url = $protocol . $host . BASE_URL;
 $current_url = $protocol . $host . $_SERVER['REQUEST_URI'];
-$pagina_actual = basename($_SERVER['PHP_SELF']);
+$current_page = basename($_SERVER['PHP_SELF']);
 
 $title = $page_title ?? 'OmnIng | Hardware operativo y software medible';
 $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operativos y desarrollo web orientado a conversión con Google Analytics 4 y trackeo de conversiones.';
@@ -48,27 +48,27 @@ $desc = $page_description ?? 'Soporte técnico para mantener tus equipos operati
             <div class="collapse navbar-collapse" id="menuPrincipal">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item mx-2">
-                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'index.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>">
+                        <a id="nav-inicio" class="nav-link text-blanco d-flex align-items-center gap-2 <?= ($current_page == 'index.php') ? 'active fw-bold texto-primario' : '' ?>" href="<?= BASE_URL ?>">
                             <i class="fa-solid fa-house"></i> Inicio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'nosotros.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>nosotros">
+                        <a id="nav-nosotros" class="nav-link text-blanco d-flex align-items-center gap-2 <?= ($current_page == 'nosotros.php') ? 'active fw-bold texto-primario' : '' ?>" href="<?= BASE_URL ?>nosotros">
                             <i class="fa-solid fa-users"></i> Nosotros
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'servicios.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>servicios">
+                        <a id="nav-servicios" class="nav-link text-blanco d-flex align-items-center gap-2 <?= ($current_page == 'servicios.php') ? 'active fw-bold texto-primario' : '' ?>" href="<?= BASE_URL ?>servicios">
                             <i class="fa-solid fa-laptop-code"></i> Servicios
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'portafolio.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>portafolio">
+                        <a id="nav-portafolio" class="nav-link text-blanco d-flex align-items-center gap-2 <?= ($current_page == 'portafolio.php') ? 'active fw-bold texto-primario' : '' ?>" href="<?= BASE_URL ?>portafolio">
                             <i class="fa-solid fa-briefcase"></i> Portafolio
                         </a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2 <?php echo $pagina_actual === 'contacto.php' ? 'active fw-bold texto-primario' : ''; ?>" href="<?= BASE_URL ?>contacto">
+                        <a id="nav-contacto" class="nav-link text-blanco d-flex align-items-center gap-2 <?= ($current_page == 'contacto.php') ? 'active fw-bold texto-primario' : '' ?>" href="<?= BASE_URL ?>contacto">
                             <i class="fa-solid fa-envelope"></i> Contacto
                         </a>
                     </li>
