@@ -23,7 +23,7 @@ include 'includes/header.php';
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h2 class="texto-secundario mb-4 fw-bold">Nuestro Origen</h2>
                 <p class="fs-5">
-                    OmnIng nació el <strong>30 de mayo de 2026</strong> con el propósito de potenciar y aplicar los conocimientos adquiridos en la carrera de Ingeniería en Sistemas y Computación. 
+                    <strong>OmnIng</strong> nació el <strong>30 de mayo de 2026</strong> con el propósito de potenciar y aplicar los conocimientos adquiridos en la carrera de Ingeniería en Sistemas y Computación. 
                 </p>
                 <p>
                     Nuestro nombre fusiona el prefijo <strong>"Omni"</strong> (que significa "todo") e <strong>"Ing"</strong> (de "Ingeniería"). Bajo este concepto, ofrecemos servicios integrales de ingeniería informática y técnica, combinando lo mejor de dos mundos:

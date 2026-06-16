@@ -117,6 +117,11 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-primario) !important;
 }
 
+.navbar-nav .nav-link.active {
+    color: var(--color-primario) !important;
+    font-weight: bold;
+}
+
 .custom-hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
